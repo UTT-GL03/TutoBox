@@ -49,3 +49,33 @@ Face à cette dérive, le projet TutoBox propose une alternative dédiée à l'a
   - Suppression radicale de la lecture automatique (_autoplay_) et du défilement infini de suggestions.
   - Mise en avant de résumés textuels, schémas synthétiques et chapitrages précis, évitant de charger une vidéo complète pour consulter une information ponctuelle.
   - Mesure et transparence de l'empreinte pour inciter à l'auto-régulation.
+
+---
+
+## Plateformes de référence et scénarios d'usage
+
+### Plateformes et alternatives de référence
+
+TutoBox s'évalue et se positionne face à plusieurs acteurs existants de la vidéo et du tutoriel :
+
+- **Plateformes vidéo généralistes :** YouTube, Dailymotion, Vimeo
+- **Plateformes de cours et tutoriels :** Tuto.com
+
+### Scénarios utilisateurs
+
+#### 1. Scénario : « Apprendre à faire des pâtes »
+
+1. **Besoin initial :** L'utilisateur ne trouve pas l'information dans des livres ou à portée de main.
+2. **Accès à la plateforme :** Ouvre le navigateur et se rend sur **TutoBox**.
+3. **Recherche :** Fait une recherche par mots-clés.
+4. **Sélection :** Clique sur le tutoriel avec le meilleur ratio like / dislike ou le plus consulté.
+5. **Consultation :** Regarde le premier tutoriel.
+6. **Résultat :** L'utilisateur sait faire des pâtes.
+
+#### 2. Scénario : « Apprendre à faire des pâtes (l’utilisateur connaît un créateur) »
+
+1. **Besoin initial :** L'utilisateur ne trouve pas l'information dans des livres ou à portée de main, mais connaît déjà un créateur.
+2. **Accès à la plateforme :** Ouvre le navigateur et se rend sur **TutoBox**.
+3. **Recherche :** Fait une recherche par créateur.
+4. **Sélection :** Clique sur le tutoriel qui correspond.
+5. **Résultat :** L'utilisateur sait faire des pâtes.
