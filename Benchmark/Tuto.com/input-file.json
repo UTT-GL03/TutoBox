@@ -1,0 +1,44 @@
+{
+  "extra-header": {
+    "Cookie": "monster=blue",
+    "x-men": "wolverine",
+    "Authorization": "Basic c3BpZTpFaXBzRXJnb1N1bTQyJA=="
+  },
+  "audit-category": [
+    "performance",
+    "seo",
+    "accessibility",
+    "best-practices",
+    "lighthouse-plugin-ecoindex-core"
+  ],
+  "output": [
+    "html",
+    "json"
+  ],
+  "user-agent": "random",
+  "courses": [
+    {
+      "name": "Parcours 1: Avec mots-clés",
+      "target": "Apprendre à faire des pâtes",
+      "course": "Entrer directement le nom de ce qu'on veut apprendre ",
+      "is-best-pages": true,
+      "urls": [
+        "fr.tuto.com",
+        "https://fr.tuto.com/recherche/#q=faire+des+pates&o=1",
+        "https://fr.tuto.com/processus-de-creation/serigraphie-methode-complete,122271.html"
+      ]
+    },
+    {
+      "name": "Parcours 2: Directement avec le nom du createur",
+      "target": "Apprendre à faire les pâtes",
+      "course": "Entrer directement le nom du créateur qu'on connait ",
+      "is-best-pages": false,
+      "urls": [
+        "fr.tuto.com",
+        "https://fr.tuto.com/formateur/a-defarges.htm",
+        "https://fr.tuto.com/photoshop/tuto-digital-painting-feu-lave,195781.html",
+        "https://fr.tuto.com/photoshop/tuto-digital-painting-feu-lave,195781.html"
+      ]
+    }
+  ]
+}
