@@ -3,7 +3,7 @@
 La mesure a été effectuée le 05 Octobre 2026 
 
 ## Niveau d’écoconception du site web
-![EcoIndexScreenshot](Images/EcoIndex-vimeo.jpeg)
+![EcoIndexScreenshot](/Images/EcoIndex-vimeo.jpeg)
 
 Note Ecoindex : 18/100
 
