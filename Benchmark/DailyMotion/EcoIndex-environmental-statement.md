@@ -1,15 +1,15 @@
 # DECLARATION ENVIRONNEMENTAL DE CE SITE WEB
 
-La mesure a été effectuée le 05 Octobre 2026 
+La mesure a été effectuée le 06 Octobre 2026 
 
 ## Niveau d’écoconception du site web
-![EcoIndexScreenshot]()
+![EcoIndexScreenshot](/Images/EcoIndex_DailyMotion.png)
 
-Note Ecoindex : 18/100
+Note Ecoindex : 23/100
 
-Consommation d'eau moyenne rapportée à 1 000 utilisateurs (en litres) : 39.60 litres.
+Consommation d'eau moyenne rapportée à 1 000 utilisateurs (en litres) : 38.10 litres.
 
-Émission de Gaz à Effet de Serre (GES) moyenne rapportée à 1 000 utilisateurs (kilos CO2e) : 2.64 kilos CO2e.
+Émission de Gaz à Effet de Serre (GES) moyenne rapportée à 1 000 utilisateurs (kilos CO2e) : 2.54 kilos CO2e.
 
 ## Méthode d'évaluation
 Comme toute ressource numérique, ce site web génère une empreinte écologique, restituée ici à travers des indicateurs standardisés.
