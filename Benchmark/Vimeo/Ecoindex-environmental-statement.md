@@ -50,4 +50,17 @@ Pour faciliter la lecture, les résultats sont déclinés en quatre axes :
 - Consommation d'eau rapportée à 1000 utilisateurs (en litres): 28.8 (soit l'équivalent de 5 douches).
 - Émission de GES rapportée à 1000 utilissateurs (kgCO₂e): 1.92 (soit l'équivalent d'un trajet de 9.6 km en voiture).
 
-### Page 3: []
+### Page 3: [page commerciale](vimeo.com/upgrade)
+
+| Grade | EcoIndex | Eau(litres) | GES (kgCO₂e) | Nb de requêtes | Taille de la page(Mo) | Taille du DOM |
+|---|---|---|---|---|---|---|
+| D | 47/100 | 30.9 | 2.06 | 208 | 3.901 | 217 |
+
+- Consommation d'eau rapportée à 1000 utilisateurs (en litres): 30.9 (soit l'équivalent de 5 douches).
+- Émission de GES rapportée à 1000 utilissateurs (kgCO₂e): 2.06 (soit l'équivalent d'un trajet de 10.3 km en voiture).
+
+## Evaluation de l'impact pour 2 parcours utilisateurs sur le site
+
+### Parcours 1: Faire une recherche de Tutoriel directement par mots-clés
+
+  - Objectif du parcours: Apprendre à faire du pain
