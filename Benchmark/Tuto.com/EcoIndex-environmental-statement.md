@@ -5,11 +5,11 @@ La mesure a été effectuée le 05 Octobre 2026
 ## Niveau d’écoconception du site web
 ![EcoIndexScreenshot](/Images/EcoIndex_tuto.com.png)
 
-Note Ecoindex : 19/100
+Note Ecoindex : 15/100
 
-Consommation d'eau moyenne rapportée à 1 000 utilisateurs (en litres) : 39.30 litres.
+Consommation d'eau moyenne rapportée à 1 000 utilisateurs (en litres) : 40.5 litres.
 
-Émission de Gaz à Effet de Serre (GES) moyenne rapportée à 1 000 utilisateurs (kilos CO2e) : 2.62 kilos CO2e.
+Émission de Gaz à Effet de Serre (GES) moyenne rapportée à 1 000 utilisateurs (kilos CO2e) : 2.70 kilos CO2e.
 
 ## Méthode d'évaluation
 Comme toute ressource numérique, ce site web génère une empreinte écologique, restituée ici à travers des indicateurs standardisés.
@@ -36,28 +36,28 @@ Pour faciliter la lecture, les résultats sont déclinés en quatre axes :
 
 | Grade | EcoIndex | Eau(litres) | GES (kgCO₂e) | Nb de requêtes | Taille de la page(Mo) | Taille du DOM |
 |---|---|---|---|---|---|---|
-| F | 23/100 | 38.1 | 2.54 | 131 | 2.278 | 3 |
+| F | 15/100 | 36.00 | 2.40 | 192 | 1.354 | 3544 |
 
-- Consommation d'eau rapportée à 1000 utilisateurs (en litres): 43.5 (soit l'équivalent de 7 douches).
-- Émission de GES rapportée à 1000 utilissateurs (kgCO₂e): 2.9 (soit l'équivalent d'un trajet de 14.5 km en voiture).
+- Consommation d'eau rapportée à 1000 utilisateurs (en litres): 36.00 (soit l'équivalent de 6 douches).
+- Émission de GES rapportée à 1000 utilissateurs (kgCO₂e): 2.4 (soit l'équivalent d'un trajet de 12 km en voiture).
 
-### Page 2: [https://vimeo.com/log_in](https://vimeo.com/log_in)
-
-| Grade | EcoIndex | Eau(litres) | GES (kgCO₂e) | Nb de requêtes | Taille de la page(Mo) | Taille du DOM |
-|---|---|---|---|---|---|---|
-| D | 54/100 | 28.8 | 1.92 | 117 | 3.411 | 1217 |
-
-- Consommation d'eau rapportée à 1000 utilisateurs (en litres): 28.8 (soit l'équivalent de 5 douches).
-- Émission de GES rapportée à 1000 utilissateurs (kgCO₂e): 1.92 (soit l'équivalent d'un trajet de 9.6 km en voiture).
-
-### Page 3: [vimeo.com/upgrade](vimeo.com/upgrade)
+### Page 2: [https://fr.tuto.com/connexion/](https://fr.tuto.com/connexion/)<!-- Page d'Accès au bibliothèque de cours par les créateurs et les formateurs -->
 
 | Grade | EcoIndex | Eau(litres) | GES (kgCO₂e) | Nb de requêtes | Taille de la page(Mo) | Taille du DOM |
 |---|---|---|---|---|---|---|
-| D | 47/100 | 30.9 | 2.06 | 208 | 3.901 | 1217 |
+| B | 71/100 | 23.7 | 1.58 | 75 | 0.746 | 1376 |
 
-- Consommation d'eau rapportée à 1000 utilisateurs (en litres): 30.9 (soit l'équivalent de 5 douches).
-- Émission de GES rapportée à 1000 utilissateurs (kgCO₂e): 2.06 (soit l'équivalent d'un trajet de 10.3 km en voiture).
+- Consommation d'eau rapportée à 1000 utilisateurs (en litres): 23.7 (soit l'équivalent de 4 douches).
+- Émission de GES rapportée à 1000 utilissateurs (kgCO₂e): 1.58 (soit l'équivalent d'un trajet de 7,90 km en voiture).
+
+### Page 3: [https://fr.tuto.com/tuto/?o=3](https://fr.tuto.com/tuto/?o=3)
+
+| Grade | EcoIndex | Eau(litres) | GES (kgCO₂e) | Nb de requêtes | Taille de la page(Mo) | Taille du DOM |
+|---|---|---|---|---|---|---|
+| D | 35/100 | 34.5 | 2.3 | 68 | 0.804 | 1824 |
+
+- Consommation d'eau rapportée à 1000 utilisateurs (en litres): 34.5 (soit l'équivalent de 5 douches).
+- Émission de GES rapportée à 1000 utilissateurs (kgCO₂e): 2.3 (soit l'équivalent d'un trajet de 11.5 km en voiture).
 
 ## Evaluation de l'impact pour 2 parcours utilisateurs sur le site
 
