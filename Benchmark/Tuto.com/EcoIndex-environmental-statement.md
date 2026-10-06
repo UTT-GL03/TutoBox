@@ -3,7 +3,7 @@
 La mesure a été effectuée le 05 Octobre 2026 
 
 ## Niveau d’écoconception du site web
-![EcoIndexScreenshot]()
+![EcoIndexScreenshot](/Images/EcoIndex_tuto.com.png)
 
 Note Ecoindex : 19/100
 
