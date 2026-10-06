@@ -68,7 +68,7 @@ Pour faciliter la lecture, les résultats sont déclinés en quatre axes :
 
 | Stage/page | Lien de la page | Grade | EcoIndex | Eau(l) | GES (kgCO₂e) | Nb de requêtes | Taille de la course(Mo) | Taille du DOM |
 |---|---|---|---|---|---|---|---|---|
-| page d'accueil | [vimeo.com](vimeo.com) | D | 44/100 | 27.5 | 1.83 | 72 | 1.950 | 1150 |
+| page d'accueil | [fr.tuto.com](fr.tuto.com) | D | 44/100 | 27.5 | 1.83 | 72 | 1.950 | 1150 |
 | Résultat de la recherche | [vimeo.com/search?q=nature](vimeo.com/search?q=nature) | E | 33/100 | 31.2 | 2.08 | 95 | 2.800 | 2300 |
 | Page de visionnage | [vimeo.com/22439234](vimeo.com/22439234) | F | 22/100 | 36.5 | 2.43 | 128 | 4.400 | 2300 |
 
