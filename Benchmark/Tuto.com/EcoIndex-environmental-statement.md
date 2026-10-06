@@ -85,10 +85,10 @@ Pour faciliter la lecture, les résultats sont déclinés en quatre axes :
 | page d'accueil | [fr.tuto.com](fr.tuto.com) | F | 15/100 | 36 | 2.40 | 2.92 | 1.354 | 3544 |
 | Profil du créateur | [https://fr.tuto.com/formateur/a-defarges.htm](https://fr.tuto.com/formateur/a-defarges.htm) | D | 43/100 | 32.1 | 2.14 | 42 | 0.543 | 1904 |
 | Résultat de la recherche | [https://fr.tuto.com/photoshop/tuto-digital-painting-feu-lave,195781.html](https://fr.tuto.com/photoshop/tuto-digital-painting-feu-lave,195781.html) | E | 29/100 | 36.3 | 2.42 | 83 | 1.506 | 1769 |
-| Page de visionnage | [vimeo.com/182512998](vimeo.com/182512998) | F | 21/100 | 37.2 | 2.48 | 134 | 4.650 | 2380 |
+| Page de visionnage | [https://fr.tuto.com/photoshop/tuto-digital-painting-feu-lave,195781.html](https://fr.tuto.com/photoshop/tuto-digital-painting-feu-lave,195781.html) | F | 21/100 | 37.2 | 2.48 | 134 | 4.650 | 2380 |
 
-- Consommation d'eau rapportée à 1000 utilisateurs (en litres): 33.25 (soit l'équivalent de 6 douches).
-- Émission de GES rapportée à 1000 utilissateurs (kgCO₂e): 2.12 (soit l'équivalent d'un trajet de 10.5 km en voiture).
+- Consommation d'eau rapportée à 1000 utilisateurs (en litres): 35.4 (soit l'équivalent de 6 douches).
+- Émission de GES rapportée à 1000 utilissateurs (kgCO₂e): 2.36 (soit l'équivalent d'un trajet de 11.8 km en voiture).
 
 ## L'écoconception
 
