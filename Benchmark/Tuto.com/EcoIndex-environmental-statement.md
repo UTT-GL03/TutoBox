@@ -68,12 +68,12 @@ Pour faciliter la lecture, les résultats sont déclinés en quatre axes :
 
 | Stage/page | Lien de la page | Grade | EcoIndex | Eau(l) | GES (kgCO₂e) | Nb de requêtes | Taille de la course(Mo) | Taille du DOM |
 |---|---|---|---|---|---|---|---|---|
-| page d'accueil | [fr.tuto.com](fr.tuto.com) | D | 44/100 | 27.5 | 1.83 | 72 | 1.950 | 1150 |
-| Résultat de la recherche | [vimeo.com/search?q=nature](vimeo.com/search?q=nature) | E | 33/100 | 31.2 | 2.08 | 95 | 2.800 | 2300 |
-| Page de visionnage | [vimeo.com/22439234](vimeo.com/22439234) | F | 22/100 | 36.5 | 2.43 | 128 | 4.400 | 2300 |
+| page d'accueil | [fr.tuto.com](fr.tuto.com) | F | 15/100 | 36 | 2.40 | 2.92 | 1.354 | 3544 |
+| Résultat de la recherche | [https://fr.tuto.com/recherche/#q=faire+des+pates&o=1](https://fr.tuto.com/recherche/#q=faire+des+pates&o=1) | F | 19/100 | 39.3 | 2.62 | 150 | 1.152 | 2705 |
+| Page de visionnage | [https://fr.tuto.com/processus-de-creation/serigraphie-methode-complete,122271.html](https://fr.tuto.com/processus-de-creation/serigraphie-methode-complete,122271.html) | E | 30/100 | 36 | 2.4 | 77 | 1.211 | 2109 |
 
-- Consommation d'eau rapportée à 1000 utilisateurs (en litres): 31.73 (soit l'équivalent de 5 douches).
-- Émission de GES rapportée à 1000 utilissateurs (kgCO₂e): 2.11 (soit l'équivalent d'un trajet de 10.55 km en voiture).
+- Consommation d'eau rapportée à 1000 utilisateurs (en litres): 37.1 (soit l'équivalent de 6 douches).
+- Émission de GES rapportée à 1000 utilissateurs (kgCO₂e): 2.47 (soit l'équivalent d'un trajet de 12.36 km en voiture).
 
 ### Parcours 2: Faire une recherche de tutoriel sur comment faire des pâtes (directement avec le nom d'un créateur) 
 
@@ -82,9 +82,9 @@ Pour faciliter la lecture, les résultats sont déclinés en quatre axes :
 
 | Stage/page | Lien de la page | Grade | EcoIndex | Eau(l) | GES (kgCO₂e) | Nb de requêtes | Taille de la course(Mo) | Taille du DOM |
 |---|---|---|---|---|---|---|---|---|
-| page d'accueil | [vimeo.com](vimeo.com) | D | 44/100 | 27.5 | 1.83 | 72 | 1.950 | 1150 |
-| Résultat de la recherche | [vimeo.com/search?q=pasta+grannies+fresh+pasta](vimeo.com/search?q=pasta+grannies+fresh+pasta) | E | 32/100 | 31.8 | 2.12 | 98 | 2.950 | 1720 |
-| Profil du créateur | [vimeo.com/channels/pastagrannies](vimeo.com/channels/pastagrannies) | E | 35/100 | 30.5 | 2.03 | 86 | 2.500 | 1480 |
+| page d'accueil | [fr.tuto.com](fr.tuto.com) | F | 15/100 | 36 | 2.40 | 2.92 | 1.354 | 3544 |
+| Profil du créateur | [https://fr.tuto.com/formateur/a-defarges.htm](https://fr.tuto.com/formateur/a-defarges.htm) | D | 43/100 | 32.1 | 2.14 | 42 | 0.543 | 1904 |
+| Résultat de la recherche | [https://fr.tuto.com/photoshop/tuto-digital-painting-feu-lave,195781.html](https://fr.tuto.com/photoshop/tuto-digital-painting-feu-lave,195781.html) | E | 29/100 | 36.3 | 2.42 | 83 | 1.506 | 1769 |
 | Page de visionnage | [vimeo.com/182512998](vimeo.com/182512998) | F | 21/100 | 37.2 | 2.48 | 134 | 4.650 | 2380 |
 
 - Consommation d'eau rapportée à 1000 utilisateurs (en litres): 33.25 (soit l'équivalent de 6 douches).
