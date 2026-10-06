@@ -36,7 +36,7 @@ Pour faciliter la lecture, les résultats sont déclinés en quatre axes :
 
 | Grade | EcoIndex | Eau(litres) | GES (kgCO₂e) | Nb de requêtes | Taille de la page(Mo) | Taille du DOM |
 |---|---|---|---|---|---|---|
-| G | 5/100 | 43.5 | 2.9 | 266 | 8.272 | 3287 |
+| G | 5/100 | 43.5 | 2.9 | 266 | 8.146 | 2510 |
 
 - Consommation d'eau rapportée à 1000 utilisateurs (en litres): 43.5 (soit l'équivalent de 7 douches).
 - Émission de GES rapportée à 1000 utilissateurs (kgCO₂e): 2.9 (soit l'équivalent d'un trajet de 14.5 km en voiture).
@@ -45,7 +45,7 @@ Pour faciliter la lecture, les résultats sont déclinés en quatre axes :
 
 | Grade | EcoIndex | Eau(litres) | GES (kgCO₂e) | Nb de requêtes | Taille de la page(Mo) | Taille du DOM |
 |---|---|---|---|---|---|---|
-| D | 54/100 | 28.8 | 1.92 | 117 | 3.411 | 1217 |
+| D | 54/100 | 28.8 | 1.92 | 117 | 3.411 | 217 |
 
 - Consommation d'eau rapportée à 1000 utilisateurs (en litres): 28.8 (soit l'équivalent de 5 douches).
 - Émission de GES rapportée à 1000 utilissateurs (kgCO₂e): 1.92 (soit l'équivalent d'un trajet de 9.6 km en voiture).
@@ -54,7 +54,7 @@ Pour faciliter la lecture, les résultats sont déclinés en quatre axes :
 
 | Grade | EcoIndex | Eau(litres) | GES (kgCO₂e) | Nb de requêtes | Taille de la page(Mo) | Taille du DOM |
 |---|---|---|---|---|---|---|
-| D | 47/100 | 30.9 | 2.06 | 208 | 3.901 | 1217 |
+| D | 47/100 | 30.9 | 2.06 | 208 | 3.901 | 217 |
 
 - Consommation d'eau rapportée à 1000 utilisateurs (en litres): 30.9 (soit l'équivalent de 5 douches).
 - Émission de GES rapportée à 1000 utilissateurs (kgCO₂e): 2.06 (soit l'équivalent d'un trajet de 10.3 km en voiture).
@@ -68,12 +68,12 @@ Pour faciliter la lecture, les résultats sont déclinés en quatre axes :
 
 | Stage/page | Lien de la page | Grade | EcoIndex | Eau(l) | GES (kgCO₂e) | Nb de requêtes | Taille de la course(Mo) | Taille du DOM |
 |---|---|---|---|---|---|---|---|---|
-| page d'accueil | [vimeo.com](vimeo.com) | D | 44/100 | 27.5 | 1.83 | 72 | 1.950 | 1150 |
+| page d'accueil | [vimeo.com](vimeo.com) | G | 5/100 | 43.5 | 2.9 | 266 | 8.146 | 2510 |
 | Résultat de la recherche | [vimeo.com/search?q=nature](vimeo.com/search?q=nature) | E | 33/100 | 31.2 | 2.08 | 95 | 2.800 | 2300 |
-| Page de visionnage | [vimeo.com/22439234](vimeo.com/22439234) | F | 22/100 | 36.5 | 2.43 | 128 | 4.400 | 2300 |
+| Page de visionnage | [vimeo.com/22439234](vimeo.com/22439234) | G | 9/100 | 42.3 | 2.82 | 228 | 9.357 | 1706 |
 
-- Consommation d'eau rapportée à 1000 utilisateurs (en litres): 31.73 (soit l'équivalent de 5 douches).
-- Émission de GES rapportée à 1000 utilissateurs (kgCO₂e): 2.11 (soit l'équivalent d'un trajet de 10.55 km en voiture).
+- Consommation d'eau rapportée à 1000 utilisateurs (en litres): 33.67 (soit l'équivalent de 6 douches).
+- Émission de GES rapportée à 1000 utilissateurs (kgCO₂e): 2.6 (soit l'équivalent d'un trajet de 13 km en voiture).
 
 ### Parcours 2: Faire une recherche de tutoriel sur comment faire des pâtes (directement avec le nom d'un créateur) 
 
@@ -82,13 +82,13 @@ Pour faciliter la lecture, les résultats sont déclinés en quatre axes :
 
 | Stage/page | Lien de la page | Grade | EcoIndex | Eau(l) | GES (kgCO₂e) | Nb de requêtes | Taille de la course(Mo) | Taille du DOM |
 |---|---|---|---|---|---|---|---|---|
-| page d'accueil | [vimeo.com](vimeo.com) | D | 44/100 | 27.5 | 1.83 | 72 | 1.950 | 1150 |
-| Résultat de la recherche | [vimeo.com/search?q=pasta+grannies+fresh+pasta](vimeo.com/search?q=pasta+grannies+fresh+pasta) | E | 32/100 | 31.8 | 2.12 | 98 | 2.950 | 1720 |
-| Profil du créateur | [vimeo.com/channels/pastagrannies](vimeo.com/channels/pastagrannies) | E | 35/100 | 30.5 | 2.03 | 86 | 2.500 | 1480 |
-| Page de visionnage | [vimeo.com/182512998](vimeo.com/182512998) | F | 21/100 | 37.2 | 2.48 | 134 | 4.650 | 2380 |
+| page d'accueil | [vimeo.com](vimeo.com) | G | 5/100 | 43.5 | 2.9 | 266 | 8.146 | 2510 |
+| Résultat de la recherche | [https://www.europeanfilmawards.eu/?s=european+film+awards&e_search_props=d4303b2-30316](https://www.europeanfilmawards.eu/?s=european+film+awards&e_search_props=d4303b2-30316) | G | 4/100 | 43.8 | 2.92 | 620 | 262.981 | 7808 |
+| Profil du créateur | [https://www.europeanfilmawards.eu/award-edition/awards-2005/](https://www.europeanfilmawards.eu/award-edition/awards-2005/) | F | 12/100 | 41.4 | 2.76 | 153 | 5.807| 2081 |
+| Page de visionnage | [vimeo.com/182512998](vimeo.com/182512998) | F | 12/100 | 40.2 | 2.7 | 150 | 5.805 | 2380 |
 
-- Consommation d'eau rapportée à 1000 utilisateurs (en litres): 33.25 (soit l'équivalent de 6 douches).
-- Émission de GES rapportée à 1000 utilissateurs (kgCO₂e): 2.12 (soit l'équivalent d'un trajet de 10.5 km en voiture).
+- Consommation d'eau rapportée à 1000 utilisateurs (en litres): 42.23 (soit l'équivalent de 7 douches).
+- Émission de GES rapportée à 1000 utilissateurs (kgCO₂e): 2.82 (soit l'équivalent d'un trajet de 14.1 km en voiture).
 
 ## L'écoconception
 
