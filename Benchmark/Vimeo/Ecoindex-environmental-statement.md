@@ -83,8 +83,8 @@ Pour faciliter la lecture, les résultats sont déclinés en quatre axes :
 | Stage/page | Lien de la page | Grade | EcoIndex | Eau(l) | GES (kgCO₂e) | Nb de requêtes | Taille de la course(Mo) | Taille du DOM |
 |---|---|---|---|---|---|---|---|---|
 | page d'accueil | [vimeo.com](vimeo.com) | G | 5/100 | 43.5 | 2.9 | 266 | 8.146 | 2510 |
-| Résultat de la recherche | [https://www.europeanfilmawards.eu/?s=european+film+awards&e_search_props=d4303b2-30316](https://www.europeanfilmawards.eu/?s=european+film+awards&e_search_props=d4303b2-30316) | G | 4/100 | 43.8 | 2.92 | 620 | 262.981 | 7808 |
-| Profil du créateur | [https://www.europeanfilmawards.eu/award-edition/awards-2005/](https://www.europeanfilmawards.eu/award-edition/awards-2005/) | F | 12/100 | 41.4 | 2.76 | 153 | 5.807| 2081 |
+| Profil du créateur | [https://www.europeanfilmawards.eu/?s=european+film+awards&e_search_props=d4303b2-30316](https://www.europeanfilmawards.eu/?s=european+film+awards&e_search_props=d4303b2-30316) | G | 4/100 | 43.8 | 2.92 | 620 | 262.981 | 7808 |
+| Résultat de la recherche | [https://www.europeanfilmawards.eu/award-edition/awards-2005/](https://www.europeanfilmawards.eu/award-edition/awards-2005/) | F | 12/100 | 41.4 | 2.76 | 153 | 5.807| 2081 |
 | Page de visionnage | [vimeo.com/182512998](vimeo.com/182512998) | F | 12/100 | 40.2 | 2.7 | 150 | 5.805 | 2380 |
 
 - Consommation d'eau rapportée à 1000 utilisateurs (en litres): 42.23 (soit l'équivalent de 7 douches).
