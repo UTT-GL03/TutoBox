@@ -92,5 +92,5 @@ Nous avons donc comparé l'impact des scénarios sur les différents sites qui f
 | Site Web | Score (sur 100) | Classe | Détail des mesures |
 |---|---|---|---|
 | DailyMotion | 24/100 | F | [Plus de détails](Benchmark/DailyMotion/EcoIndex-environmental-statement.md) |
-| tuto.com | 15/100 | F | [Plus de détails]()
+| tuto.com | 15/100 | F | [Plus de détails](Benchmark/Tuto.com/EcoIndex-environmental-statement.md) |
 | Vimeo | 18/100 | F | [Plus de détails]()
