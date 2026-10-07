@@ -93,4 +93,19 @@ Nous avons donc comparé l'impact des scénarios sur les différents sites qui f
 |---|---|---|---|
 | DailyMotion | 24/100 | F | [Plus de détails](Benchmark/DailyMotion/EcoIndex-environmental-statement.md) |
 | tuto.com | 15/100 | F | [Plus de détails](Benchmark/Tuto.com/EcoIndex-environmental-statement.md) |
-| Vimeo | 18/100 | F | [Plus de détails]()
+| Vimeo | 18/100 | F | [Plus de détails](Benchmark/Vimeo/Ecoindex-environmental-statement.md) |
+
+**Tab 1:** Mesure de l'EcoIndex moyen des service fournissant l'accès aux tutoriels.
+
+Les mesures de l'impact moyen de ces services révèlent des classes EcoIndex très faibles pour la plupart (E ou F).
+
+Dans le détail, les pages les plus mal classées sont celles qui incluent:
+  
+  - Des vidéos
+  - Des designs graphiques très lourds
+  - Des traqueurs en très grand nombre
+  - Des publicités en grand nombre 
+
+Il est donc nécessaires d'appliquer des pratiques d'écoconception et un modèle économique permettant de réduire le recours à des services publiciataires et de traqueurs.
+
+## Modèle économique 
