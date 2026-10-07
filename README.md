@@ -82,7 +82,7 @@ TutoBox s'évalue et se positionne face à plusieurs acteurs existants de la vid
 
 ## Impact de l'exécution des scénarios auprès de différents services concurrents 
 
-L'EcoIndex d'une page (de A à G) est calculé (à l'aide des outils tels que [https://www.ecoindex.fr/](https://www.ecoindex.fr/) ou [https://www.greenit.fr/](https://www.greenit.fr/)) en fonction du positionnement de cette page parmi les pages mondiales concernant:
+L'EcoIndex d'une page (de A à G) est calculé (à l'aide des outils tels que [EcoIndex](https://www.ecoindex.fr/) ou [GreenIT](https://www.greenit.fr/)) en fonction du positionnement de cette page parmi les pages mondiales concernant:
   - Le nombre de requêtes lancées
   - Le poids de la page
   - Le nombre d'éléments de la page
@@ -91,6 +91,6 @@ Nous avons donc comparé l'impact des scénarios sur les différents sites qui f
 
 | Site Web | Score (sur 100) | Classe | Détail des mesures |
 |---|---|---|---|
-| DailyMotion |
+| DailyMotion | 24/100 | F | [Plus de détails](Benchmark/DailyMotion/EcoIndex-environmental-statement.md) |
 | tuto.com |
 | Vimeo |
