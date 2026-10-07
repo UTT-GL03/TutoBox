@@ -79,3 +79,18 @@ TutoBox s'évalue et se positionne face à plusieurs acteurs existants de la vid
 3. **Recherche :** Fait une recherche par créateur.
 4. **Sélection :** Clique sur le tutoriel qui correspond.
 5. **Résultat :** L'utilisateur sait faire des pâtes.
+
+## Impact de l'exécution des scénarios auprès de différents services concurrents 
+
+L'EcoIndex d'une page (de A à G) est calculé (à l'aide des outils tels que [https://www.ecoindex.fr/](https://www.ecoindex.fr/) ou [https://www.greenit.fr/](https://www.greenit.fr/)) en fonction du positionnement de cette page parmi les pages mondiales concernant:
+  - Le nombre de requêtes lancées
+  - Le poids de la page
+  - Le nombre d'éléments de la page
+
+Nous avons donc comparé l'impact des scénarios sur les différents sites qui fournissent un l'accès à des tutoriels: Youtube, tuto.com, Vimeo, DailyMotion, Domestika.
+
+| Site Web | Score (sur 100) | Classe | Détail des mesures |
+|---|---|---|---|
+| DailyMotion |
+| tuto.com |
+| Vimeo |
