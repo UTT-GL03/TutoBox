@@ -1,11 +1,11 @@
 # DECLARATION ENVIRONNEMENTAL DE CE SITE WEB
 
-La mesure a été effectuée le 06 Octobre 2026 
+La mesure a été effectuée le 07 Octobre 2026 
 
 ## Niveau d’écoconception du site web
 ![EcoIndexScreenshot](/Images/EcoIndex_DailyMotion.png)
 
-Note Ecoindex : 23/100
+Note Ecoindex : 24/100
 
 Consommation d'eau moyenne rapportée à 1 000 utilisateurs (en litres) : 38.10 litres.
 
@@ -32,32 +32,32 @@ Pour faciliter la lecture, les résultats sont déclinés en quatre axes :
 
 ## Évaluation de l'impact des 3 pages les plus visitées du site 
 
-### Page 1: [vimeo.com](vimeo.com)
+### Page 1: [dailymotion.com](dailymotion.com)
 
 | Grade | EcoIndex | Eau(litres) | GES (kgCO₂e) | Nb de requêtes | Taille de la page(Mo) | Taille du DOM |
 |---|---|---|---|---|---|---|
-| G | 5/100 | 43.5 | 2.9 | 266 | 8.146 | 2510 |
+| D | 45/100 | 31.6 | 2.11 | 19 | 2.152 | 1284 |
 
-- Consommation d'eau rapportée à 1000 utilisateurs (en litres): 43.5 (soit l'équivalent de 7 douches).
-- Émission de GES rapportée à 1000 utilissateurs (kgCO₂e): 2.9 (soit l'équivalent d'un trajet de 14.5 km en voiture).
+- Consommation d'eau rapportée à 1000 utilisateurs (en litres): 31.6 (soit l'équivalent de 5 douches).
+- Émission de GES rapportée à 1000 utilissateurs (kgCO₂e): 2.11 (soit l'équivalent d'un trajet de 10.55 km en voiture).
 
-### Page 2: [https://vimeo.com/log_in](https://vimeo.com/log_in)
-
-| Grade | EcoIndex | Eau(litres) | GES (kgCO₂e) | Nb de requêtes | Taille de la page(Mo) | Taille du DOM |
-|---|---|---|---|---|---|---|
-| D | 54/100 | 28.8 | 1.92 | 117 | 3.411 | 217 |
-
-- Consommation d'eau rapportée à 1000 utilisateurs (en litres): 28.8 (soit l'équivalent de 5 douches).
-- Émission de GES rapportée à 1000 utilissateurs (kgCO₂e): 1.92 (soit l'équivalent d'un trajet de 9.6 km en voiture).
-
-### Page 3: [vimeo.com/upgrade](vimeo.com/upgrade)
+### Page 2: [dailymotion.com/search](dailymotion.com/search)
 
 | Grade | EcoIndex | Eau(litres) | GES (kgCO₂e) | Nb de requêtes | Taille de la page(Mo) | Taille du DOM |
 |---|---|---|---|---|---|---|
-| D | 47/100 | 30.9 | 2.06 | 208 | 3.901 | 217 |
+| F | 21/100 | 38.7 | 2.58 | 143 | 2.678 | 1286 |
 
-- Consommation d'eau rapportée à 1000 utilisateurs (en litres): 30.9 (soit l'équivalent de 5 douches).
-- Émission de GES rapportée à 1000 utilissateurs (kgCO₂e): 2.06 (soit l'équivalent d'un trajet de 10.3 km en voiture).
+- Consommation d'eau rapportée à 1000 utilisateurs (en litres): 38.7 (soit l'équivalent de 6 douches).
+- Émission de GES rapportée à 1000 utilissateurs (kgCO₂e): 2.58 (soit l'équivalent d'un trajet de 12.9 km en voiture).
+
+### Page 3: [dailymotion.com/signin](dailymotion.com/signin)
+
+| Grade | EcoIndex | Eau(litres) | GES (kgCO₂e) | Nb de requêtes | Taille de la page(Mo) | Taille du DOM |
+|---|---|---|---|---|---|---|
+| C | 60/100 | 26.9 | 1.79 | 92 | 3.190 | 147 |
+
+- Consommation d'eau rapportée à 1000 utilisateurs (en litres): 26.9 (soit l'équivalent de 4 douches).
+- Émission de GES rapportée à 1000 utilissateurs (kgCO₂e): 1.79 (soit l'équivalent d'un trajet de 8.95 km en voiture).
 
 ## Evaluation de l'impact pour 2 parcours utilisateurs sur le site
 
@@ -68,12 +68,12 @@ Pour faciliter la lecture, les résultats sont déclinés en quatre axes :
 
 | Stage/page | Lien de la page | Grade | EcoIndex | Eau(l) | GES (kgCO₂e) | Nb de requêtes | Taille de la course(Mo) | Taille du DOM |
 |---|---|---|---|---|---|---|---|---|
-| page d'accueil | [vimeo.com](vimeo.com) | G | 5/100 | 43.5 | 2.9 | 266 | 8.146 | 2510 |
-| Résultat de la recherche | [vimeo.com/search?q=nature](vimeo.com/search?q=nature) | E | 33/100 | 31.2 | 2.08 | 95 | 2.800 | 2300 |
-| Page de visionnage | [vimeo.com/22439234](vimeo.com/22439234) | G | 9/100 | 42.3 | 2.82 | 228 | 9.357 | 1706 |
+| page d'accueil | [https://www.dailymotion.com/fr](https://www.dailymotion.com/fr) | D | 45/100 | 31.6 | 2.11 | 19 | 2.152 | 1284 |
+| Résultat de la recherche | [https://www.dailymotion.com/search/faire%20des%20pates/top-results](https://www.dailymotion.com/search/faire%20des%20pates/top-results) | B | 71/100 | 23.6 | 1.57 | 9 | 1.45 | 644 |
+| Page de visionnage | [https://www.dailymotion.com/video/xkoxco](https://www.dailymotion.com/video/xkoxco) | E | 36/100 | 34.1 | 2.27 | 111 | 4.633 | 651 |
 
-- Consommation d'eau rapportée à 1000 utilisateurs (en litres): 33.67 (soit l'équivalent de 6 douches).
-- Émission de GES rapportée à 1000 utilissateurs (kgCO₂e): 2.6 (soit l'équivalent d'un trajet de 13 km en voiture).
+- Consommation d'eau rapportée à 1000 utilisateurs (en litres): 29.77 (soit l'équivalent de 5 douches).
+- Émission de GES rapportée à 1000 utilissateurs (kgCO₂e): 1.98 (soit l'équivalent d'un trajet de 9.92 km en voiture).
 
 ### Parcours 2: Faire une recherche de tutoriel sur comment faire des pâtes (directement avec le nom d'un créateur) 
 
@@ -82,13 +82,13 @@ Pour faciliter la lecture, les résultats sont déclinés en quatre axes :
 
 | Stage/page | Lien de la page | Grade | EcoIndex | Eau(l) | GES (kgCO₂e) | Nb de requêtes | Taille de la course(Mo) | Taille du DOM |
 |---|---|---|---|---|---|---|---|---|
-| page d'accueil | [vimeo.com](vimeo.com) | G | 5/100 | 43.5 | 2.9 | 266 | 8.146 | 2510 |
-| Profil du créateur | [https://www.europeanfilmawards.eu/?s=european+film+awards&e_search_props=d4303b2-30316](https://www.europeanfilmawards.eu/?s=european+film+awards&e_search_props=d4303b2-30316) | G | 4/100 | 43.8 | 2.92 | 620 | 262.981 | 7808 |
-| Résultat de la recherche | [https://www.europeanfilmawards.eu/award-edition/awards-2005/](https://www.europeanfilmawards.eu/award-edition/awards-2005/) | F | 12/100 | 41.4 | 2.76 | 153 | 5.807| 2081 |
-| Page de visionnage | [vimeo.com/182512998](vimeo.com/182512998) | F | 12/100 | 40.2 | 2.7 | 150 | 5.805 | 2380 |
+| page d'accueil | [https://www.dailymotion.com/fr](https://www.dailymotion.com/fr) | D | 45/100 | 31.6 | 2.11 | 19 | 2.152 | 1284 |
+| résultat de la recherche | [https://www.dailymotion.com/search/750%20grammes/top-results](https://www.dailymotion.com/search/750%20grammes/top-results) | D | 45/100 | 31.6 | 2.10 | 79 | 2.279 | 664 |
+| Profil du créateur |[https://www.dailymotion.com/user/750grammes]https://www.dailymotion.com/user/750grammes) | E | 38/100 | 33.7 | 2.25 | 114 | 3.014| 649 |
+| Page de visionnage | [https://www.dailymotion.com/video/xbdk6hm](https://www.dailymotion.com/video/xbdk6hm) | E | 31/100 | 35.7 | 2.38 | 129 | 12.124 | 695 |
 
-- Consommation d'eau rapportée à 1000 utilisateurs (en litres): 42.23 (soit l'équivalent de 7 douches).
-- Émission de GES rapportée à 1000 utilissateurs (kgCO₂e): 2.82 (soit l'équivalent d'un trajet de 14.1 km en voiture).
+- Consommation d'eau rapportée à 1000 utilisateurs (en litres): 33.15 (soit l'équivalent de 5 douches).
+- Émission de GES rapportée à 1000 utilissateurs (kgCO₂e): 2.21 (soit l'équivalent d'un trajet de 11.05 km en voiture).
 
 ## L'écoconception
 
