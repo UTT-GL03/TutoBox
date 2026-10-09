@@ -59,7 +59,7 @@ Face à cette dérive, le projet TutoBox propose une alternative dédiée à l'a
 TutoBox s'évalue et se positionne face à plusieurs acteurs existants de la vidéo et du tutoriel :
 
 - **Plateformes vidéo généralistes :** YouTube, Dailymotion, Vimeo
-- **Plateformes de cours et tutoriels :** Tuto.com
+- **Plateformes de cours, académiques et tutoriels :** Tuto.com, POD UTT
 
 ### Scénarios utilisateurs
 
@@ -87,17 +87,19 @@ L'EcoIndex d'une page (de A à G) est calculé (à l'aide des outils tels que [E
   - Le poids de la page
   - Le nombre d'éléments de la page
 
-Nous avons donc comparé l'impact des scénarios sur les différents sites qui fournissent un l'accès à des tutoriels: Youtube, tuto.com, Vimeo, DailyMotion, Domestika.
+Nous avons donc comparé l'impact des scénarios sur les différents sites qui fournissent un l'accès à des tutoriels: YouTube, tuto.com, Vimeo, DailyMotion, POD UTT.
 
 | Site Web | Score (sur 100) | Classe | Détail des mesures |
 |---|---|---|---|
+| POD UTT | 61/100 | C | [Plus de détails](Benchmark/POD_UTT/EcoIndex-environmental-statement.md) |
 | DailyMotion | 24/100 | F | [Plus de détails](Benchmark/DailyMotion/EcoIndex-environmental-statement.md) |
-| tuto.com | 15/100 | F | [Plus de détails](Benchmark/Tuto.com/EcoIndex-environmental-statement.md) |
 | Vimeo | 18/100 | F | [Plus de détails](Benchmark/Vimeo/Ecoindex-environmental-statement.md) |
+| tuto.com | 15/100 | F | [Plus de détails](Benchmark/Tuto.com/EcoIndex-environmental-statement.md) |
+| YouTube | 8/100 | G | [Plus de détails](Benchmark/YouTube/EcoIndex-environmental-statement.md) |
 
 **Tab 1:** Mesure de l'EcoIndex moyen des service fournissant l'accès aux tutoriels.
 
-Les mesures de l'impact moyen de ces services révèlent des classes EcoIndex très faibles pour la plupart (E ou F).
+Les mesures de l'impact de ces services révèlent des disparités notables : les plateformes commerciales grand public présentent des classes EcoIndex très faibles (F, et G pour YouTube), tandis qu'une plateforme sobre comme POD UTT atteint la classe C (61/100).
 
 Dans le détail, les pages les plus mal classées sont celles qui incluent:
   
