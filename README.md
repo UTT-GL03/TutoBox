@@ -116,11 +116,6 @@ Comme nous l'avons vu dans la section précédente, parmi les choix de conceptio
 
 En effet, le monde du streaming vidéo est un domaine assez capitaliste où la réalisation des profits passe avant la réduction de l'impact environnementale du produit. Au vue de la concurrence dans ce secteur chaque plateforme de streaming vidéo ou de tutoriels disposent de son propre modèle économique afin d'attirer le plus d'utilisateurs. 
 
-Pour ce qui est des modèles économiques des services numériques des plateformes vidéos (cf. Tab. 2 ), ils semblent s'être harmonisés autour d'un modèle dit "freemium" (de free, gratuit, et premium, supplément):
-
-  - un accès gratuit à certaines vidéos, financé par la publicité,
-  - un accès à l'ensemble des vidéos de la plateforme, réservé aux abonnés
-
 
 | Plateforme | Modèle d'accès | Source de financement | Publicités & Traqueurs |
 |---|---|---|---|
