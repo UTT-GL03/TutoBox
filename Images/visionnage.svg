@@ -1,275 +1,180 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 1150" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 1060" width="100%" height="100%">
   <defs>
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap');
-      
-      * {
-        box-sizing: border-box;
-        font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      text {
+        font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       }
-
-      .bg { fill: #F9FAF9; }
-      .header-bg { fill: #FFFFFF; }
-      .card-bg { fill: #FFFFFF; }
-      .border-line { stroke: #E5E9E5; stroke-width: 1; }
-      
-      /* Typography */
-      .brand-title { font-size: 20px; font-weight: 700; fill: #1B4332; }
-      .brand-subtitle { font-size: 11px; font-weight: 500; fill: #52796F; }
-      
-      .video-title { font-size: 22px; font-weight: 700; fill: #111827; }
-      .author-name { font-size: 15px; font-weight: 600; fill: #1F2937; }
-      .author-sub { font-size: 12px; fill: #6B7280; }
-      
-      .section-heading { font-size: 18px; font-weight: 700; fill: #1B4332; }
-      .comment-author { font-size: 14px; font-weight: 600; fill: #1F2937; }
-      .comment-date { font-size: 12px; fill: #9CA3AF; }
-      .comment-body { font-size: 14px; fill: #374151; line-height: 1.5; }
-      
-      .eco-badge-text { font-size: 12px; font-weight: 600; fill: #1B4332; }
-      .footer-text { font-size: 12px; fill: #718096; }
+      .page-border {
+        stroke: #1D5987;
+        stroke-width: 2;
+        fill: #FFFFFF;
+      }
+      .page-label {
+        font-size: 16px;
+        font-weight: 700;
+        fill: #1D5987;
+      }
+      .comp-border {
+        stroke: #B3262E;
+        stroke-width: 1.8;
+        fill: #FFFFFF;
+      }
+      .comp-label {
+        font-size: 14px;
+        font-weight: 600;
+        fill: #B3262E;
+      }
+      .elem-border {
+        stroke: #111827;
+        stroke-width: 1.5;
+        fill: #FFFFFF;
+      }
+      .elem-label {
+        font-size: 12px;
+        font-weight: 600;
+        fill: #111827;
+      }
+      .elem-pill {
+        stroke: #111827;
+        stroke-width: 1.4;
+        fill: #FFFFFF;
+      }
+      .mask-bg {
+        fill: #FFFFFF;
+      }
     </style>
-
-    <filter id="video-shadow" x="-3%" y="-3%" width="106%" height="110%" filterUnits="userSpaceOnUse">
-      <feDropShadow dx="0" dy="4" stdDeviation="10" flood-color="#000000" flood-opacity="0.12"/>
-    </filter>
-    <filter id="card-shadow" x="-5%" y="-5%" width="110%" height="115%" filterUnits="userSpaceOnUse">
-      <feDropShadow dx="0" dy="2" stdDeviation="6" flood-color="#1B4332" flood-opacity="0.05"/>
-    </filter>
   </defs>
 
   <!-- Background Canvas -->
-  <rect width="1440" height="1150" class="bg"/>
+  <rect width="1440" height="1060" fill="#FFFFFF"/>
 
-  <!-- ==================== HEADER (Identique à Accueil et Recherche) ==================== -->
-  <rect x="0" y="0" width="1440" height="72" class="header-bg"/>
-  <line x1="0" y1="72" x2="1440" y2="72" class="border-line"/>
-
-  <!-- Brand / Logo (Top Header) -->
-  <g transform="translate(64, 18)">
-    <rect x="0" y="0" width="36" height="36" rx="9" fill="#1B4332"/>
-    <polygon points="14,11 26,18 14,25" fill="#D8F3DC"/>
-    <circle cx="27" cy="10" r="3" fill="#52B788"/>
-    
-    <text x="46" y="22" class="brand-title">TutoBox</text>
-    <text x="46" y="34" class="brand-subtitle">Apprentissage sobre &amp; éco-conçu</text>
+  <!-- ==================== CADRE GLOBAL : PAGE CONSULTATION ==================== -->
+  <g id="page-container">
+    <rect x="40" y="30" width="1360" height="1000" rx="10" class="page-border"/>
+    <rect x="65" y="20" width="220" height="20" class="mask-bg"/>
+    <text x="75" y="35" class="page-label">Consultation de tutoriel</text>
   </g>
 
-  <!-- Header Right Navigation: Eco Badge + Account / Login -->
-  <g transform="translate(1080, 18)">
-    <rect x="0" y="2" width="116" height="32" rx="16" fill="#E8F5E9" stroke="#A3E635" stroke-width="1"/>
-    <circle cx="16" cy="18" r="5" fill="#2E7D32"/>
-    <text x="28" y="22" class="eco-badge-text">EcoIndex: A</text>
+  <!-- ==================== COMPOSANT MÉTIER : HEADER ==================== -->
+  <g id="header-component">
+    <rect x="70" y="58" width="1300" height="74" rx="8" class="comp-border"/>
+    <rect x="92" y="49" width="85" height="18" class="mask-bg"/>
+    <text x="98" y="62" class="comp-label">Header</text>
 
-    <!-- Login / Compte Button -->
-    <g transform="translate(132, 0)">
-      <rect x="0" y="0" width="164" height="36" rx="8" fill="#FFFFFF" stroke="#D1D5DB" stroke-width="1.2"/>
-      <g transform="translate(14, 9)">
-        <circle cx="9" cy="6" r="4.5" fill="none" stroke="#2D6A4F" stroke-width="1.6"/>
-        <path d="M1.5 16 C1.5 12.5, 4.5 11, 9 11 C13.5 11, 16.5 12.5, 16.5 16" fill="none" stroke="#2D6A4F" stroke-width="1.6" stroke-linecap="round"/>
-      </g>
-      <text x="42" y="23" font-size="13" font-weight="600" fill="#1B4332">Login / Compte</text>
-    </g>
+    <!-- Logo / Identité -->
+    <rect x="95" y="76" width="320" height="42" rx="6" class="elem-border"/>
+    <text x="255" y="102" text-anchor="middle" class="elem-label">Logo / Identité</text>
+
+    <!-- Indicateur d'impact -->
+    <rect x="790" y="76" width="250" height="42" rx="21" class="elem-border"/>
+    <text x="915" y="102" text-anchor="middle" class="elem-label">Indicateur d'impact</text>
+
+    <!-- Compte / Authentification -->
+    <rect x="1060" y="76" width="280" height="42" rx="6" class="elem-border"/>
+    <text x="1200" y="102" text-anchor="middle" class="elem-label">Compte / Authentification</text>
   </g>
 
-  <!-- Back to Search Breadcrumb -->
-  <g transform="translate(180, 96)">
-    <text x="0" y="0" font-size="13" fill="#6B7280">
-      <tspan fill="#2D6A4F" font-weight="600">← Retour aux résultats</tspan>
-      <tspan fill="#9CA3AF"> / Cuisine sobre / Pâtes fraîches maison</tspan>
-    </text>
-  </g>
+  <!-- ==================== COMPOSANT MÉTIER : LECTEUR VIDÉO ==================== -->
+  <g id="video-player-component">
+    <rect x="70" y="148" width="1300" height="280" rx="8" class="comp-border"/>
+    <rect x="92" y="139" width="125" height="18" class="mask-bg"/>
+    <text x="98" y="152" class="comp-label">Lecteur vidéo</text>
 
-  <!-- ==================== LARGE VIDEO PLAYER (CENTRAL & PROMINENT) ==================== -->
-  <g transform="translate(180, 114)">
-    <!-- Video Player Frame (1080 x 500 px - High Visibility 16:9 centered) -->
-    <rect x="0" y="0" width="1080" height="490" rx="12" fill="#0F172A" filter="url(#video-shadow)"/>
-    
-    <!-- Video Scene Representation (Cooking tutorial scene illustration) -->
-    <rect x="0" y="0" width="1080" height="442" rx="12" fill="#1E293B"/>
-    <path d="M 0 320 Q 300 240 600 300 T 1080 260 L 1080 442 L 0 442 Z" fill="#243347" opacity="0.6"/>
-    
-    <!-- Central Play Overlay Symbol -->
-    <circle cx="540" cy="220" r="42" fill="#1B4332" opacity="0.9" stroke="#52B788" stroke-width="2"/>
-    <polygon points="534,204 554,220 534,236" fill="#FFFFFF"/>
-    
-    <!-- Subtle Eco-tip Overlay (TutoBox signature: no autoplay, smart pause) -->
-    <g transform="translate(30, 30)">
-      <rect x="0" y="0" width="280" height="32" rx="16" fill="#000000" opacity="0.75"/>
-      <circle cx="18" cy="16" r="6" fill="#22C55E"/>
-      <text x="32" y="20" font-size="11" font-weight="500" fill="#E2E8F0">Mode sobre actif • Flux coupé si onglet masqué</text>
-    </g>
+    <!-- Zone de diffusion vidéo -->
+    <rect x="95" y="168" width="1250" height="165" rx="6" class="elem-border"/>
+    <text x="720" y="258" text-anchor="middle" class="elem-label">Zone de diffusion vidéo</text>
 
-    <!-- Eco Data Live Counter (Top Right of Player) -->
-    <g transform="translate(850, 30)">
-      <rect x="0" y="0" width="200" height="32" rx="16" fill="#000000" opacity="0.75"/>
-      <text x="100" y="20" text-anchor="middle" font-size="11" font-weight="600" fill="#A7F3D0">⚡ 12.4 Mo • 0.8 gCO₂e</text>
-    </g>
+    <!-- Contrôles du lecteur vidéo -->
+    <g transform="translate(95, 348)">
+      <rect x="0" y="0" width="1250" height="65" rx="6" class="elem-border"/>
 
-    <!-- Custom Eco Video Player Control Bar -->
-    <g transform="translate(0, 442)">
-      <rect x="0" y="0" width="1080" height="48" fill="#0B132B" rx="0 0 12 12"/>
-      
-      <!-- Progress Bar (Thin & Clean) -->
-      <line x1="0" y1="0" x2="1080" y2="0" stroke="#334155" stroke-width="3"/>
-      <line x1="0" y1="0" x2="380" y2="0" stroke="#10B981" stroke-width="3"/>
-      <circle cx="380" cy="0" r="5" fill="#34D399"/>
+      <!-- Lecture / Pause -->
+      <rect x="20" y="14" width="200" height="36" rx="18" class="elem-pill"/>
+      <text x="120" y="37" text-anchor="middle" class="elem-label">Lecture / Pause</text>
 
-      <!-- Controls Row -->
-      <!-- Play/Pause -->
-      <g transform="translate(24, 16)" fill="#FFFFFF">
-        <polygon points="0,2 12,8 0,14"/>
-      </g>
-      <!-- Time -->
-      <text x="56" y="29" font-size="12" fill="#94A3B8">01:42 / 04:35</text>
+      <!-- Barre de progression -->
+      <rect x="235" y="14" width="480" height="36" rx="6" class="elem-border"/>
+      <text x="475" y="37" text-anchor="middle" class="elem-label">Barre de progression</text>
 
-      <!-- Resolution Selector (Default Eco 480p) -->
-      <g transform="translate(740, 10)">
-        <rect x="0" y="0" width="94" height="26" rx="4" fill="#1E293B" stroke="#475569" stroke-width="1"/>
-        <text x="47" y="17" text-anchor="middle" font-size="11" font-weight="600" fill="#34D399">480p (Sobre)</text>
-      </g>
+      <!-- Bascule audio seul -->
+      <rect x="730" y="14" width="240" height="36" rx="18" class="elem-pill"/>
+      <text x="850" y="37" text-anchor="middle" class="elem-label">Bascule flux audio seul</text>
 
-      <!-- Audio-only toggle (Ecological feature) -->
-      <g transform="translate(846, 10)">
-        <rect x="0" y="0" width="110" height="26" rx="4" fill="#1E293B" stroke="#475569" stroke-width="1"/>
-        <text x="55" y="17" text-anchor="middle" font-size="11" font-weight="500" fill="#94A3B8">🎙️ Audio seul</text>
-      </g>
-
-      <!-- Fullscreen Icon -->
-      <g transform="translate(1036, 18)" stroke="#FFFFFF" stroke-width="1.8" fill="none">
-        <path d="M0,4 L0,0 L4,0 M12,0 L16,0 L16,4 M16,12 L16,16 L12,16 M4,16 L0,16 L0,12"/>
-      </g>
+      <!-- Sélecteur de résolution -->
+      <rect x="985" y="14" width="245" height="36" rx="18" class="elem-pill"/>
+      <text x="1107" y="37" text-anchor="middle" class="elem-label">Sélecteur de résolution</text>
     </g>
   </g>
 
-  <!-- ==================== VIDEO INFO & RATING SECTION ==================== -->
-  <g transform="translate(180, 624)">
-    <rect x="0" y="0" width="1080" height="110" rx="10" class="card-bg" stroke="#E5E9E5" stroke-width="1" filter="url(#card-shadow)"/>
-    
-    <!-- Title -->
-    <text x="24" y="34" class="video-title">Tutoriel : Pâtes fraîches maison sans machine (Farine &amp; Œufs)</text>
+  <!-- ==================== COMPOSANT MÉTIER : MÉTADONNÉES & IMPACT ==================== -->
+  <g id="metadata-impact-component">
+    <rect x="70" y="445" width="1300" height="120" rx="8" class="comp-border"/>
+    <rect x="92" y="436" width="210" height="18" class="mask-bg"/>
+    <text x="98" y="449" class="comp-label">Métadonnées &amp; Impact</text>
 
-    <!-- Creator info -->
-    <g transform="translate(24, 52)">
-      <!-- Creator Avatar -->
-      <circle cx="18" cy="18" r="18" fill="#E8F5E9"/>
-      <text x="18" y="23" text-anchor="middle" font-size="13" font-weight="700" fill="#1B4332">CS</text>
-      
-      <!-- Creator Name and Meta -->
-      <text x="46" y="15" class="author-name">Chef Sobriété</text>
-      <text x="46" y="31" class="author-sub">Publié il y a 2 mois • Fiche pédagogique incluse • Codec H265</text>
-      
-      <!-- Subscribe / Soutenir (Freemium creator support) -->
-      <g transform="translate(420, 4)">
-        <rect x="0" y="0" width="120" height="30" rx="6" fill="#E8F5E9" stroke="#81C784" stroke-width="1"/>
-        <text x="60" y="20" text-anchor="middle" font-size="12" font-weight="600" fill="#1B4332">Suivre ce créateur</text>
-      </g>
-    </g>
+    <!-- Métadonnées du tutoriel -->
+    <rect x="95" y="465" width="615" height="85" rx="6" class="elem-border"/>
+    <text x="402" y="500" text-anchor="middle" class="elem-label">Titre du tutoriel &amp; Informations créateur</text>
+    <text x="402" y="526" text-anchor="middle" class="elem-label">Évaluation communautaire</text>
 
-    <!-- 5-STAR RATING SYSTEM (Demande explicite de l'utilisateur) -->
-    <g transform="translate(740, 24)">
-      <!-- Background Container for Rating -->
-      <rect x="0" y="0" width="316" height="66" rx="8" fill="#F9FAF9" stroke="#E5E7EB" stroke-width="1"/>
-      
-      <!-- Average Rating info -->
-      <text x="16" y="24" font-size="13" font-weight="600" fill="#1F2937">Note moyenne : 4.9/5</text>
-      <text x="156" y="24" font-size="11" fill="#6B7280">(142 évaluations)</text>
-      
-      <!-- Interactive 5 Stars -->
-      <g transform="translate(16, 34)">
-        <text x="0" y="18" font-size="11" font-weight="500" fill="#4B5563">Votre note :</text>
-        <g transform="translate(75, 4)">
-          <!-- Star 1 -->
-          <text x="0" y="15" font-size="20" fill="#EAB308" style="cursor:pointer">★</text>
-          <!-- Star 2 -->
-          <text x="24" y="15" font-size="20" fill="#EAB308" style="cursor:pointer">★</text>
-          <!-- Star 3 -->
-          <text x="48" y="15" font-size="20" fill="#EAB308" style="cursor:pointer">★</text>
-          <!-- Star 4 -->
-          <text x="72" y="15" font-size="20" fill="#EAB308" style="cursor:pointer">★</text>
-          <!-- Star 5 -->
-          <text x="96" y="15" font-size="20" fill="#EAB308" style="cursor:pointer">★</text>
-        </g>
-        <rect x="200" y="2" width="90" height="22" rx="4" fill="#1B4332"/>
-        <text x="245" y="17" text-anchor="middle" font-size="11" font-weight="600" fill="#FFFFFF">Noter (5/5)</text>
-      </g>
+    <!-- Tableau de bord d'impact écologique -->
+    <rect x="730" y="465" width="615" height="85" rx="6" class="elem-border"/>
+    <text x="1037" y="500" text-anchor="middle" class="elem-label">Tableau de bord d'impact écologique</text>
+    <text x="1037" y="526" text-anchor="middle" class="elem-label">Bilan de transfert &amp; Émissions évitées</text>
+  </g>
+
+  <!-- ==================== COMPOSANT MÉTIER : FICHE PRATIQUE SYNTHÉTIQUE ==================== -->
+  <g id="written-guide-component">
+    <rect x="70" y="580" width="1300" height="215" rx="8" class="comp-border"/>
+    <rect x="92" y="571" width="220" height="18" class="mask-bg"/>
+    <text x="98" y="584" class="comp-label">Fiche pratique synthétique</text>
+
+    <!-- Accès alternatif sans vidéo -->
+    <rect x="95" y="600" width="1250" height="34" rx="4" class="elem-border"/>
+    <text x="720" y="622" text-anchor="middle" class="elem-label">Option de consultation sobre : Guide textuel (Sans chargement vidéo)</text>
+
+    <!-- Étapes génériques de la fiche -->
+    <g transform="translate(95, 646)">
+      <rect x="0" y="0" width="238" height="135" rx="6" class="elem-border"/>
+      <text x="119" y="74" text-anchor="middle" class="elem-label">Étape 1</text>
+
+      <rect x="253" y="0" width="238" height="135" rx="6" class="elem-border"/>
+      <text x="372" y="74" text-anchor="middle" class="elem-label">Étape 2</text>
+
+      <rect x="506" y="0" width="238" height="135" rx="6" class="elem-border"/>
+      <text x="625" y="74" text-anchor="middle" class="elem-label">Étape 3</text>
+
+      <rect x="759" y="0" width="238" height="135" rx="6" class="elem-border"/>
+      <text x="878" y="74" text-anchor="middle" class="elem-label">Étape 4</text>
+
+      <rect x="1012" y="0" width="238" height="135" rx="6" class="elem-border"/>
+      <text x="1131" y="74" text-anchor="middle" class="elem-label">Étape 5</text>
     </g>
   </g>
 
-  <!-- ==================== NO RECOMMENDED VIDEOS NOTICE ==================== -->
-  <!-- Clarification visuelle démontrant l'engagement écologique et l'absence d'algorithme de suggestion -->
-  <g transform="translate(180, 746)">
-    <rect x="0" y="0" width="1080" height="34" rx="6" fill="#F0FDF4" stroke="#DCFCE7" stroke-width="1"/>
-    <text x="16" y="22" font-size="12" font-weight="500" fill="#166534">
-      🌱 <tspan font-weight="700">Sobriété cognitive garantie :</tspan> Aucune vidéo recommandée, aucun algorithme de suggestion ni lecture automatique sur TutoBox.
-    </text>
-  </g>
+  <!-- ==================== COMPOSANT MÉTIER : ESPACE COMMUNAUTAIRE ==================== -->
+  <g id="community-component">
+    <rect x="70" y="810" width="1300" height="165" rx="8" class="comp-border"/>
+    <rect x="92" y="801" width="195" height="18" class="mask-bg"/>
+    <text x="98" y="814" class="comp-label">Espace communautaire</text>
 
-  <!-- ==================== COMMENT SECTION ==================== -->
-  <g transform="translate(180, 800)">
-    <!-- Header of Comments Section -->
-    <text x="0" y="0" class="section-heading">Commentaires et retours d'apprentissage (2)</text>
-    
-    <!-- Add Comment Box -->
-    <g transform="translate(0, 16)">
-      <rect x="0" y="0" width="1080" height="76" rx="8" class="card-bg" stroke="#D1D5DB" stroke-width="1"/>
-      <circle cx="28" cy="30" r="16" fill="#F3F4F6"/>
-      <!-- User Icon -->
-      <circle cx="28" cy="26" r="5" fill="#9CA3AF"/>
-      <path d="M20 38 C20 34 24 33 28 33 C32 33 36 34 36 38" fill="#9CA3AF"/>
+    <!-- Zone de contribution -->
+    <rect x="95" y="830" width="1250" height="42" rx="6" class="elem-border"/>
+    <text x="720" y="856" text-anchor="middle" class="elem-label">Formulaire de contribution textuelle</text>
 
-      <text x="56" y="32" font-size="13" fill="#9CA3AF">Partagez votre retour d'apprentissage ou posez une question...</text>
-      
-      <!-- Submit Button -->
-      <g transform="translate(970, 40)">
-        <rect x="0" y="0" width="94" height="28" rx="5" fill="#1B4332"/>
-        <text x="47" y="19" text-anchor="middle" font-size="12" font-weight="600" fill="#FFFFFF">Publier</text>
-      </g>
-    </g>
+    <!-- Retours et réponses -->
+    <g transform="translate(95, 882)">
+      <rect x="0" y="0" width="615" height="78" rx="6" class="elem-border"/>
+      <text x="307" y="45" text-anchor="middle" class="elem-label">Commentaire apprenant</text>
 
-    <!-- Comment 1 -->
-    <g transform="translate(0, 108)">
-      <rect x="0" y="0" width="1080" height="82" rx="8" class="card-bg" stroke="#E5E9E5" stroke-width="1"/>
-      <!-- Avatar -->
-      <circle cx="28" cy="30" r="16" fill="#D1FAE5"/>
-      <text x="28" y="35" text-anchor="middle" font-size="12" font-weight="700" fill="#065F46">AD</text>
-      
-      <text x="56" y="24" class="comment-author">Antoine D.</text>
-      <text x="140" y="24" class="comment-date">il y a 3 jours</text>
-      <text x="56" y="46" class="comment-body">Super tutoriel très clair ! Réalisé en 20 minutes avec mes enfants. La texture était parfaite dès le premier essai.</text>
-      
-      <!-- Thumbs up / Helpful -->
-      <g transform="translate(56, 58)">
-        <text x="0" y="14" font-size="12" fill="#16A34A">👍 14 personnes ont trouvé ce retour utile</text>
-      </g>
-    </g>
-
-    <!-- Comment 2 -->
-    <g transform="translate(0, 202)">
-      <rect x="0" y="0" width="1080" height="82" rx="8" class="card-bg" stroke="#E5E9E5" stroke-width="1"/>
-      <!-- Avatar -->
-      <circle cx="28" cy="30" r="16" fill="#FEF3C7"/>
-      <text x="28" y="35" text-anchor="middle" font-size="12" font-weight="700" fill="#92400E">SM</text>
-      
-      <text x="56" y="24" class="comment-author">Sophie M.</text>
-      <text x="135" y="24" class="comment-date">il y a 1 semaine</text>
-      <text x="56" y="46" class="comment-body">Merci d'avoir inclus les dosages exacts par écrit sous la vidéo, ça évite de devoir remettre en arrière plusieurs fois !</text>
-      
-      <g transform="translate(56, 58)">
-        <text x="0" y="14" font-size="12" fill="#16A34A">👍 8 personnes ont trouvé ce retour utile</text>
-      </g>
+      <rect x="635" y="0" width="615" height="78" rx="6" class="elem-border"/>
+      <text x="942" y="45" text-anchor="middle" class="elem-label">Réponse créateur</text>
     </g>
   </g>
 
-  <!-- ==================== FOOTER ==================== -->
-  <line x1="0" y1="1100" x2="1440" y2="1100" class="border-line"/>
-  <rect x="0" y="1101" width="1440" height="49" fill="#FFFFFF"/>
-  
-  <g transform="translate(64, 1130)">
-    <text x="0" y="0" class="footer-text">© 2026 TutoBox — Visionnage sobre : bande passante allégée, respect de l'attention de l'apprenant.</text>
-  </g>
-  <g transform="translate(1376, 1130)" text-anchor="end">
-    <text x="0" y="0" class="footer-text">Résolution optimisée • Pas de scripts intrusifs • Hébergement éco-responsable</text>
+  <!-- ==================== COMPOSANT MÉTIER : FOOTER ==================== -->
+  <g id="footer-component">
+    <rect x="70" y="990" width="1300" height="30" rx="6" class="elem-border"/>
+    <text x="720" y="1010" text-anchor="middle" class="elem-label">Pied de page (Mentions légales &amp; Modèle économique)</text>
   </g>
 </svg>
-
