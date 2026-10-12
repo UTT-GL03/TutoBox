@@ -118,5 +118,5 @@ En effet, le monde du streaming vidéo est un domaine assez capitaliste où la r
 
 Pour ce qui est des modèles économiques des services numériques des plateformes vidéos (cf. Tab. 2 ), ils semblent s'être harmonisés autour d'un modèle dit "freemium" (de free, gratuit, et premium, supplément) et parfois autour d'un modèle quasiment gratuit.
 
-un accès gratuit à certaines vidéos, financé par la publicité,
-un accès à l'ensemble des vidéos de la plateforme, réservé aux abonnés
+  - un accès gratuit à certaines vidéos, financé par la publicité,
+  - un accès à l'ensemble des vidéos de la plateforme, réservé aux abonnés
