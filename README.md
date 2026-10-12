@@ -111,3 +111,12 @@ Dans le détail, les pages les plus mal classées sont celles qui incluent:
 Il est donc nécessaires d'appliquer des pratiques d'écoconception et un modèle économique permettant de réduire le recours à des services publiciataires et de traqueurs.
 
 ## Modèle économique 
+
+Comme nous l'avons vu dans la section précédente, parmi les choix de conception ayant un important impact environnemental, la plupart sont directement liés au modèle économique du service. C'est pourquoi il est donc nécessaire d'effectuer une analyse profonde de ces modèles économiques afin de choisir un meilleur modèle économique pour la conception de notre projet. 
+
+En effet, le monde du streaming vidéo est un domaine assez capitaliste où la réalisation des profits passe avant la réduction de l'impact environnementale du produit. Au vue de la concurrence dans ce secteur chaque plateforme de streaming vidéo ou de tutoriels disposent de son propre modèle économique afin d'attirer le plus d'utilisateurs. 
+
+Pour ce qui est des modèles économiques des services numériques des plateformes vidéos (cf. Tab. 2 ), ils semblent s'être harmonisés autour d'un modèle dit "freemium" (de free, gratuit, et premium, supplément) et parfois autour d'un modèle quasiment gratuit.
+
+un accès gratuit à certaines vidéos, financé par la publicité,
+un accès à l'ensemble des vidéos de la plateforme, réservé aux abonnés
