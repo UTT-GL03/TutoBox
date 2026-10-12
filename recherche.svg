@@ -1,0 +1,348 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 900" width="100%" height="100%">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap');
+      
+      * {
+        box-sizing: border-box;
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      }
+
+      .bg { fill: #F9FAF9; }
+      .header-bg { fill: #FFFFFF; }
+      .card-bg { fill: #FFFFFF; }
+      .border-line { stroke: #E5E9E5; stroke-width: 1; }
+      
+      /* Typography */
+      .brand-title { font-size: 20px; font-weight: 700; fill: #1B4332; }
+      .brand-subtitle { font-size: 11px; font-weight: 500; fill: #52796F; }
+      
+      .query-text { font-size: 15px; font-weight: 500; fill: #1F2937; }
+      .filter-label { font-size: 13px; font-weight: 600; fill: #374151; }
+      .filter-btn-text { font-size: 13px; font-weight: 500; fill: #4B5563; }
+      .filter-btn-active { font-size: 13px; font-weight: 600; fill: #1B4332; }
+      
+      .results-count { font-size: 14px; font-weight: 600; fill: #1B4332; }
+      .results-sub { font-size: 13px; fill: #6B7280; }
+      
+      .card-title { font-size: 15px; font-weight: 600; fill: #111827; }
+      .card-author { font-size: 12px; font-weight: 500; fill: #4B5563; }
+      .card-meta { font-size: 12px; fill: #6B7280; }
+      .card-data-badge { font-size: 11px; font-weight: 600; fill: #2D6A4F; }
+      
+      .page-btn { font-size: 13px; font-weight: 500; fill: #374151; }
+      .page-btn-active { font-size: 13px; font-weight: 700; fill: #FFFFFF; }
+      
+      .eco-badge-text { font-size: 12px; font-weight: 600; fill: #1B4332; }
+      .footer-text { font-size: 12px; fill: #718096; }
+    </style>
+
+    <filter id="card-shadow" x="-5%" y="-5%" width="110%" height="115%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="2" stdDeviation="6" flood-color="#1B4332" flood-opacity="0.05"/>
+    </filter>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="1440" height="900" class="bg"/>
+
+  <!-- ==================== HEADER (Identique à Accueil) ==================== -->
+  <rect x="0" y="0" width="1440" height="72" class="header-bg"/>
+  <line x1="0" y1="72" x2="1440" y2="72" class="border-line"/>
+
+  <!-- Brand / Logo (Top Header) -->
+  <g transform="translate(64, 18)">
+    <rect x="0" y="0" width="36" height="36" rx="9" fill="#1B4332"/>
+    <polygon points="14,11 26,18 14,25" fill="#D8F3DC"/>
+    <circle cx="27" cy="10" r="3" fill="#52B788"/>
+    
+    <text x="46" y="22" class="brand-title">TutoBox</text>
+    <text x="46" y="34" class="brand-subtitle">Apprentissage sobre &amp; éco-conçu</text>
+  </g>
+
+  <!-- Header Right Navigation: Eco Badge + Account / Login -->
+  <g transform="translate(1080, 18)">
+    <rect x="0" y="2" width="116" height="32" rx="16" fill="#E8F5E9" stroke="#A3E635" stroke-width="1"/>
+    <circle cx="16" cy="18" r="5" fill="#2E7D32"/>
+    <text x="28" y="22" class="eco-badge-text">EcoIndex: A</text>
+
+    <!-- Login / Compte Button -->
+    <g transform="translate(132, 0)">
+      <rect x="0" y="0" width="164" height="36" rx="8" fill="#FFFFFF" stroke="#D1D5DB" stroke-width="1.2"/>
+      <g transform="translate(14, 9)">
+        <circle cx="9" cy="6" r="4.5" fill="none" stroke="#2D6A4F" stroke-width="1.6"/>
+        <path d="M1.5 16 C1.5 12.5, 4.5 11, 9 11 C13.5 11, 16.5 12.5, 16.5 16" fill="none" stroke="#2D6A4F" stroke-width="1.6" stroke-linecap="round"/>
+      </g>
+      <text x="42" y="23" font-size="13" font-weight="600" fill="#1B4332">Login / Compte</text>
+    </g>
+  </g>
+
+  <!-- ==================== SEARCH BAR & FILTERS SECTION ==================== -->
+  <g transform="translate(64, 92)">
+    <!-- Search Bar -->
+    <rect x="0" y="0" width="920" height="48" rx="8" fill="#FFFFFF" stroke="#C8D6C9" stroke-width="1.4"/>
+    
+    <!-- Search Icon -->
+    <g transform="translate(16, 14)" stroke="#52796F" stroke-width="2" fill="none" stroke-linecap="round">
+      <circle cx="8" cy="8" r="6"/>
+      <line x1="12.5" y1="12.5" x2="17" y2="17"/>
+    </g>
+    
+    <!-- Query text already typed (Scénario ReadMe: "Apprendre à faire des pâtes") -->
+    <text x="48" y="30" class="query-text">Faire des pâtes fraîches maison</text>
+    
+    <!-- Clear Icon -->
+    <g transform="translate(775, 18)" stroke="#9CA3AF" stroke-width="1.6">
+      <line x1="0" y1="0" x2="12" y2="12"/>
+      <line x1="12" y1="0" x2="0" y2="12"/>
+    </g>
+    
+    <!-- Search Button -->
+    <g transform="translate(805, 6)">
+      <rect x="0" y="0" width="108" height="36" rx="6" fill="#1B4332"/>
+      <text x="54" y="23" text-anchor="middle" font-size="13" font-weight="600" fill="#FFFFFF">Rechercher</text>
+    </g>
+  </g>
+
+  <!-- Quick Eco stats right of search bar -->
+  <g transform="translate(1014, 92)">
+    <rect x="0" y="0" width="362" height="48" rx="8" fill="#F0FDF4" stroke="#BBF7D0" stroke-width="1"/>
+    <circle cx="24" cy="24" r="10" fill="#DCFCE7"/>
+    <text x="24" y="28" text-anchor="middle" font-size="12" fill="#16A34A">🌱</text>
+    <text x="44" y="23" font-size="12" font-weight="600" fill="#166534">Recherche sobre exécutée</text>
+    <text x="44" y="37" font-size="11" fill="#15803D">0 pub • 1 requête serveur • 42 Ko transférés</text>
+  </g>
+
+  <!-- Filter Bar (Directement sous la barre de recherche) -->
+  <g transform="translate(64, 156)">
+    <rect x="0" y="0" width="1312" height="50" rx="8" fill="#FFFFFF" stroke="#E5E9E5" stroke-width="1"/>
+    
+    <text x="16" y="30" class="filter-label">Filtres :</text>
+    
+    <!-- Filter 1: Format (Active: Tous) -->
+    <g transform="translate(80, 10)">
+      <rect x="0" y="0" width="110" height="30" rx="15" fill="#E8F5E9" stroke="#81C784" stroke-width="1"/>
+      <text x="16" y="20" class="filter-btn-active">Tous formats</text>
+      <polygon points="96,17 100,21 104,17" fill="#1B4332"/>
+    </g>
+
+    <!-- Filter 2: Durée -->
+    <g transform="translate(200, 10)">
+      <rect x="0" y="0" width="120" height="30" rx="15" fill="#F3F4F6" stroke="#E5E7EB" stroke-width="1"/>
+      <text x="16" y="20" class="filter-btn-text">Durée : &lt; 10 min</text>
+      <polygon points="106,17 110,21 114,17" fill="#6B7280"/>
+    </g>
+
+    <!-- Filter 3: Résolution sobre -->
+    <g transform="translate(330, 10)">
+      <rect x="0" y="0" width="135" height="30" rx="15" fill="#F3F4F6" stroke="#E5E7EB" stroke-width="1"/>
+      <text x="16" y="20" class="filter-btn-text">Qualité (480p/720p)</text>
+      <polygon points="121,17 125,21 129,17" fill="#6B7280"/>
+    </g>
+
+    <!-- Filter 4: Avec fiche résumé (Eco-feature) -->
+    <g transform="translate(475, 10)">
+      <rect x="0" y="0" width="155" height="30" rx="15" fill="#F3F4F6" stroke="#E5E7EB" stroke-width="1"/>
+      <text x="16" y="20" class="filter-btn-text">📄 Avec fiche écrite</text>
+      <polygon points="141,17 145,21 149,17" fill="#6B7280"/>
+    </g>
+
+    <!-- Filter 5: Tri (Right aligned) -->
+    <g transform="translate(1090, 10)">
+      <text x="0" y="20" font-size="12" fill="#6B7280">Trier par :</text>
+      <rect x="60" y="0" width="150" height="30" rx="6" fill="#F9FAF9" stroke="#D1D5DB" stroke-width="1"/>
+      <text x="72" y="20" font-size="12" font-weight="600" fill="#1F2937">Les plus sobres d'abord</text>
+      <polygon points="196,17 200,21 204,17" fill="#4B5563"/>
+    </g>
+  </g>
+
+  <!-- Results Count Bar -->
+  <g transform="translate(64, 226)">
+    <text x="0" y="0" class="results-count">6 tutoriels trouvés pour « Faire des pâtes fraîches maison »</text>
+    <text x="440" y="0" class="results-sub">— Triés par faible consommation de données &amp; pertinence pédagogique</text>
+  </g>
+
+  <!-- ==================== SEARCH RESULTS GRID (6 VIDEOS) ==================== -->
+  <g transform="translate(64, 246)">
+
+    <!-- ROW 1, CARD 1 -->
+    <g transform="translate(0, 0)">
+      <rect x="0" y="0" width="424" height="230" rx="10" class="card-bg" stroke="#E5E9E5" stroke-width="1" filter="url(#card-shadow)"/>
+      <!-- Thumbnail (Low-impact illustration placeholder) -->
+      <rect x="12" y="12" width="400" height="120" rx="6" fill="#E2E8F0"/>
+      <rect x="12" y="12" width="400" height="120" rx="6" fill="#2D6A4F" opacity="0.08"/>
+      <!-- Mini Play button overlay -->
+      <circle cx="212" cy="72" r="20" fill="#1B4332" opacity="0.85"/>
+      <polygon points="208,64 218,72 208,80" fill="#FFFFFF"/>
+      <!-- Duration Badge -->
+      <rect x="350" y="100" width="54" height="24" rx="4" fill="#000000" opacity="0.75"/>
+      <text x="377" y="116" text-anchor="middle" font-size="11" font-weight="600" fill="#FFFFFF">04:35</text>
+      <!-- Data Weight & Eco Badge -->
+      <rect x="20" y="20" width="94" height="22" rx="4" fill="#E8F5E9"/>
+      <text x="67" y="35" text-anchor="middle" class="card-data-badge">⚡ 12 Mo (480p)</text>
+      <!-- Card Details -->
+      <text x="16" y="154" class="card-title">Pâtes fraîches maison sans machine (Farine &amp; Œufs)</text>
+      <text x="16" y="174" class="card-author">Par Chef Sobriété • Cuisine Durable</text>
+      <!-- Rating stars & views -->
+      <g transform="translate(16, 184)">
+        <text x="0" y="14" font-size="12" fill="#EAB308">★★★★★</text>
+        <text x="60" y="14" class="card-meta">4.9/5 (142 avis) • 1.2k vues</text>
+        <rect x="330" y="2" width="66" height="18" rx="3" fill="#F3F4F6"/>
+        <text x="363" y="15" text-anchor="middle" font-size="10" font-weight="600" fill="#4B5563">AV1 Codec</text>
+      </g>
+    </g>
+
+    <!-- ROW 1, CARD 2 -->
+    <g transform="translate(444, 0)">
+      <rect x="0" y="0" width="424" height="230" rx="10" class="card-bg" stroke="#E5E9E5" stroke-width="1" filter="url(#card-shadow)"/>
+      <rect x="12" y="12" width="400" height="120" rx="6" fill="#E2E8F0"/>
+      <rect x="12" y="12" width="400" height="120" rx="6" fill="#1B4332" opacity="0.08"/>
+      <circle cx="212" cy="72" r="20" fill="#1B4332" opacity="0.85"/>
+      <polygon points="208,64 218,72 208,80" fill="#FFFFFF"/>
+      <rect x="350" y="100" width="54" height="24" rx="4" fill="#000000" opacity="0.75"/>
+      <text x="377" y="116" text-anchor="middle" font-size="11" font-weight="600" fill="#FFFFFF">06:12</text>
+      <rect x="20" y="20" width="94" height="22" rx="4" fill="#E8F5E9"/>
+      <text x="67" y="35" text-anchor="middle" class="card-data-badge">⚡ 18 Mo (720p)</text>
+      <text x="16" y="154" class="card-title">La technique du pétrissage à la main en 5 minutes</text>
+      <text x="16" y="174" class="card-author">Par Maria Rossi • Atelier Culinaire</text>
+      <g transform="translate(16, 184)">
+        <text x="0" y="14" font-size="12" fill="#EAB308">★★★★★</text>
+        <text x="60" y="14" class="card-meta">4.8/5 (98 avis) • 890 vues</text>
+        <rect x="330" y="2" width="66" height="18" rx="3" fill="#F3F4F6"/>
+        <text x="363" y="15" text-anchor="middle" font-size="10" font-weight="600" fill="#4B5563">VP9 Codec</text>
+      </g>
+    </g>
+
+    <!-- ROW 1, CARD 3 -->
+    <g transform="translate(888, 0)">
+      <rect x="0" y="0" width="424" height="230" rx="10" class="card-bg" stroke="#E5E9E5" stroke-width="1" filter="url(#card-shadow)"/>
+      <rect x="12" y="12" width="400" height="120" rx="6" fill="#E2E8F0"/>
+      <rect x="12" y="12" width="400" height="120" rx="6" fill="#2D6A4F" opacity="0.08"/>
+      <circle cx="212" cy="72" r="20" fill="#1B4332" opacity="0.85"/>
+      <polygon points="208,64 218,72 208,80" fill="#FFFFFF"/>
+      <rect x="350" y="100" width="54" height="24" rx="4" fill="#000000" opacity="0.75"/>
+      <text x="377" y="116" text-anchor="middle" font-size="11" font-weight="600" fill="#FFFFFF">03:45</text>
+      <rect x="20" y="20" width="94" height="22" rx="4" fill="#E8F5E9"/>
+      <text x="67" y="35" text-anchor="middle" class="card-data-badge">⚡ 09 Mo (480p)</text>
+      <text x="16" y="154" class="card-title">Tagliatelles fraîches : Découpe précise au couteau</text>
+      <text x="16" y="174" class="card-author">Par Julien B. • Savoir-faire local</text>
+      <g transform="translate(16, 184)">
+        <text x="0" y="14" font-size="12" fill="#EAB308">★★★★☆</text>
+        <text x="60" y="14" class="card-meta">4.6/5 (62 avis) • 540 vues</text>
+        <rect x="330" y="2" width="66" height="18" rx="3" fill="#F3F4F6"/>
+        <text x="363" y="15" text-anchor="middle" font-size="10" font-weight="600" fill="#4B5563">AV1 Codec</text>
+      </g>
+    </g>
+
+    <!-- ROW 2, CARD 4 -->
+    <g transform="translate(0, 248)">
+      <rect x="0" y="0" width="424" height="230" rx="10" class="card-bg" stroke="#E5E9E5" stroke-width="1" filter="url(#card-shadow)"/>
+      <rect x="12" y="12" width="400" height="120" rx="6" fill="#E2E8F0"/>
+      <rect x="12" y="12" width="400" height="120" rx="6" fill="#1B4332" opacity="0.08"/>
+      <circle cx="212" cy="72" r="20" fill="#1B4332" opacity="0.85"/>
+      <polygon points="208,64 218,72 208,80" fill="#FFFFFF"/>
+      <rect x="350" y="100" width="54" height="24" rx="4" fill="#000000" opacity="0.75"/>
+      <text x="377" y="116" text-anchor="middle" font-size="11" font-weight="600" fill="#FFFFFF">08:15</text>
+      <rect x="20" y="20" width="94" height="22" rx="4" fill="#E8F5E9"/>
+      <text x="67" y="35" text-anchor="middle" class="card-data-badge">⚡ 22 Mo (720p)</text>
+      <text x="16" y="154" class="card-title">Pâtes maison 100% végétales sans œufs (Semoule blé dur)</text>
+      <text x="16" y="174" class="card-author">Par Éco-Cuisine • Recettes simples</text>
+      <g transform="translate(16, 184)">
+        <text x="0" y="14" font-size="12" fill="#EAB308">★★★★★</text>
+        <text x="60" y="14" class="card-meta">4.9/5 (115 avis) • 1.8k vues</text>
+        <rect x="330" y="2" width="66" height="18" rx="3" fill="#F3F4F6"/>
+        <text x="363" y="15" text-anchor="middle" font-size="10" font-weight="600" fill="#4B5563">AV1 Codec</text>
+      </g>
+    </g>
+
+    <!-- ROW 2, CARD 5 -->
+    <g transform="translate(444, 248)">
+      <rect x="0" y="0" width="424" height="230" rx="10" class="card-bg" stroke="#E5E9E5" stroke-width="1" filter="url(#card-shadow)"/>
+      <rect x="12" y="12" width="400" height="120" rx="6" fill="#E2E8F0"/>
+      <rect x="12" y="12" width="400" height="120" rx="6" fill="#2D6A4F" opacity="0.08"/>
+      <circle cx="212" cy="72" r="20" fill="#1B4332" opacity="0.85"/>
+      <polygon points="208,64 218,72 208,80" fill="#FFFFFF"/>
+      <rect x="350" y="100" width="54" height="24" rx="4" fill="#000000" opacity="0.75"/>
+      <text x="377" y="116" text-anchor="middle" font-size="11" font-weight="600" fill="#FFFFFF">05:10</text>
+      <rect x="20" y="20" width="94" height="22" rx="4" fill="#E8F5E9"/>
+      <text x="67" y="35" text-anchor="middle" class="card-data-badge">⚡ 14 Mo (480p)</text>
+      <text x="16" y="154" class="card-title">Cuisson parfaite : Le secret de l'eau bouillante et du sel</text>
+      <text x="16" y="174" class="card-author">Par Luca G. • Savoirs Culinaires</text>
+      <g transform="translate(16, 184)">
+        <text x="0" y="14" font-size="12" fill="#EAB308">★★★★☆</text>
+        <text x="60" y="14" class="card-meta">4.5/5 (48 avis) • 420 vues</text>
+        <rect x="330" y="2" width="66" height="18" rx="3" fill="#F3F4F6"/>
+        <text x="363" y="15" text-anchor="middle" font-size="10" font-weight="600" fill="#4B5563">VP9 Codec</text>
+      </g>
+    </g>
+
+    <!-- ROW 2, CARD 6 -->
+    <g transform="translate(888, 248)">
+      <rect x="0" y="0" width="424" height="230" rx="10" class="card-bg" stroke="#E5E9E5" stroke-width="1" filter="url(#card-shadow)"/>
+      <rect x="12" y="12" width="400" height="120" rx="6" fill="#E2E8F0"/>
+      <rect x="12" y="12" width="400" height="120" rx="6" fill="#1B4332" opacity="0.08"/>
+      <circle cx="212" cy="72" r="20" fill="#1B4332" opacity="0.85"/>
+      <polygon points="208,64 218,72 208,80" fill="#FFFFFF"/>
+      <rect x="350" y="100" width="54" height="24" rx="4" fill="#000000" opacity="0.75"/>
+      <text x="377" y="116" text-anchor="middle" font-size="11" font-weight="600" fill="#FFFFFF">02:50</text>
+      <rect x="20" y="20" width="94" height="22" rx="4" fill="#E8F5E9"/>
+      <text x="67" y="35" text-anchor="middle" class="card-data-badge">⚡ 07 Mo (480p)</text>
+      <text x="16" y="154" class="card-title">Sauce tomate maison minute aux herbes du jardin</text>
+      <text x="16" y="174" class="card-author">Par Claire &amp; Paul • Low-Tech Food</text>
+      <g transform="translate(16, 184)">
+        <text x="0" y="14" font-size="12" fill="#EAB308">★★★★★</text>
+        <text x="60" y="14" class="card-meta">4.9/5 (204 avis) • 2.5k vues</text>
+        <rect x="330" y="2" width="66" height="18" rx="3" fill="#F3F4F6"/>
+        <text x="363" y="15" text-anchor="middle" font-size="10" font-weight="600" fill="#4B5563">AV1 Codec</text>
+      </g>
+    </g>
+
+  </g>
+
+  <!-- ==================== PAGINATION SELECTOR (1, 2, 3...) ==================== -->
+  <g transform="translate(720, 785)" text-anchor="middle">
+    <!-- Précédent Button -->
+    <g transform="translate(-180, 0)">
+      <rect x="0" y="0" width="96" height="36" rx="6" fill="#FFFFFF" stroke="#D1D5DB" stroke-width="1"/>
+      <text x="48" y="23" class="page-btn">← Précédent</text>
+    </g>
+
+    <!-- Page 1 (Active) -->
+    <g transform="translate(-70, 0)">
+      <rect x="0" y="0" width="36" height="36" rx="6" fill="#1B4332"/>
+      <text x="18" y="23" class="page-btn-active">1</text>
+    </g>
+
+    <!-- Page 2 -->
+    <g transform="translate(-24, 0)">
+      <rect x="0" y="0" width="36" height="36" rx="6" fill="#FFFFFF" stroke="#D1D5DB" stroke-width="1"/>
+      <text x="18" y="23" class="page-btn">2</text>
+    </g>
+
+    <!-- Page 3 -->
+    <g transform="translate(22, 0)">
+      <rect x="0" y="0" width="36" height="36" rx="6" fill="#FFFFFF" stroke="#D1D5DB" stroke-width="1"/>
+      <text x="18" y="23" class="page-btn">3</text>
+    </g>
+
+    <!-- Ellipsis -->
+    <text x="75" y="23" font-size="14" fill="#9CA3AF">...</text>
+
+    <!-- Suivant Button -->
+    <g transform="translate(95, 0)">
+      <rect x="0" y="0" width="86" height="36" rx="6" fill="#FFFFFF" stroke="#D1D5DB" stroke-width="1"/>
+      <text x="43" y="23" class="page-btn">Suivant →</text>
+    </g>
+  </g>
+
+  <!-- ==================== FOOTER ==================== -->
+  <line x1="0" y1="845" x2="1440" y2="845" class="border-line"/>
+  <rect x="0" y="846" width="1440" height="54" fill="#FFFFFF"/>
+  
+  <g transform="translate(64, 878)">
+    <text x="0" y="0" class="footer-text">© 2026 TutoBox — Résultats sobres : pas de scroll infini, navigation paginée économe en requêtes.</text>
+  </g>
+  <g transform="translate(1376, 878)" text-anchor="end">
+    <text x="0" y="0" class="footer-text">Données économisées estimées sur cette recherche : ~85% par rapport à une plateforme classique</text>
+  </g>
+</svg>
+

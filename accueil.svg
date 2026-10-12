@@ -1,0 +1,204 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 900" width="100%" height="100%">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap');
+      
+      * {
+        box-sizing: border-box;
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      }
+
+      .bg { fill: #F9FAF9; }
+      .header-bg { fill: #FFFFFF; }
+      .border-line { stroke: #E5E9E5; stroke-width: 1; }
+      
+      /* Typography */
+      .brand-title { font-size: 20px; font-weight: 700; fill: #1B4332; }
+      .brand-subtitle { font-size: 11px; font-weight: 500; fill: #52796F; }
+      
+      .hero-title { font-size: 42px; font-weight: 700; fill: #1B4332; letter-spacing: -0.5px; }
+      .hero-subtitle { font-size: 16px; font-weight: 400; fill: #406343; }
+      
+      .input-text { font-size: 16px; fill: #2D3748; }
+      .placeholder-text { font-size: 15px; fill: #718096; }
+      .btn-text { font-size: 14px; font-weight: 600; fill: #FFFFFF; }
+      
+      .tag-text { font-size: 12px; font-weight: 500; fill: #2D6A4F; }
+      .eco-badge-text { font-size: 12px; font-weight: 600; fill: #1B4332; }
+      .footer-text { font-size: 12px; fill: #718096; }
+    </style>
+
+    <!-- Subtle drop shadow -->
+    <filter id="card-shadow" x="-5%" y="-5%" width="110%" height="115%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="4" stdDeviation="12" flood-color="#1B4332" flood-opacity="0.06"/>
+    </filter>
+    <filter id="btn-shadow" x="-5%" y="-10%" width="110%" height="130%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#1B4332" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="1440" height="900" class="bg"/>
+
+  <!-- Subtle Eco Pattern Grid (Very low opacity) -->
+  <g opacity="0.3">
+    <line x1="0" y1="180" x2="1440" y2="180" stroke="#E2E8F0" stroke-width="0.5" stroke-dasharray="4 8"/>
+    <line x1="0" y1="360" x2="1440" y2="360" stroke="#E2E8F0" stroke-width="0.5" stroke-dasharray="4 8"/>
+    <line x1="0" y1="540" x2="1440" y2="540" stroke="#E2E8F0" stroke-width="0.5" stroke-dasharray="4 8"/>
+    <line x1="0" y1="720" x2="1440" y2="720" stroke="#E2E8F0" stroke-width="0.5" stroke-dasharray="4 8"/>
+  </g>
+
+  <!-- ==================== HEADER ==================== -->
+  <rect x="0" y="0" width="1440" height="72" class="header-bg"/>
+  <line x1="0" y1="72" x2="1440" y2="72" class="border-line"/>
+
+  <!-- Brand / Logo (Top Header) -->
+  <g transform="translate(64, 18)">
+    <!-- Eco Play Logo Icon -->
+    <rect x="0" y="0" width="36" height="36" rx="9" fill="#1B4332"/>
+    <polygon points="14,11 26,18 14,25" fill="#D8F3DC"/>
+    <circle cx="27" cy="10" r="3" fill="#52B788"/>
+    
+    <text x="46" y="22" class="brand-title">TutoBox</text>
+    <text x="46" y="34" class="brand-subtitle">Apprentissage sobre &amp; éco-conçu</text>
+  </g>
+
+  <!-- Header Right Navigation: Eco Badge + Account / Login -->
+  <g transform="translate(1080, 18)">
+    <!-- Eco Score Pill -->
+    <rect x="0" y="2" width="116" height="32" rx="16" fill="#E8F5E9" stroke="#A3E635" stroke-width="1"/>
+    <circle cx="16" cy="18" r="5" fill="#2E7D32"/>
+    <text x="28" y="22" class="eco-badge-text">EcoIndex: A</text>
+
+    <!-- Login / Compte Button -->
+    <g transform="translate(132, 0)">
+      <rect x="0" y="0" width="164" height="36" rx="8" fill="#FFFFFF" stroke="#D1D5DB" stroke-width="1.2"/>
+      <!-- User Avatar / Icon -->
+      <g transform="translate(14, 9)">
+        <circle cx="9" cy="6" r="4.5" fill="none" stroke="#2D6A4F" stroke-width="1.6"/>
+        <path d="M1.5 16 C1.5 12.5, 4.5 11, 9 11 C13.5 11, 16.5 12.5, 16.5 16" fill="none" stroke="#2D6A4F" stroke-width="1.6" stroke-linecap="round"/>
+      </g>
+      <text x="42" y="23" font-size="13" font-weight="600" fill="#1B4332">Login / Compte</text>
+    </g>
+  </g>
+
+  <!-- ==================== MAIN CONTENT (CENTER SEARCH) ==================== -->
+  <g transform="translate(0, 0)">
+    
+    <!-- Central Brand Emblem & Titles -->
+    <g transform="translate(720, 290)" text-anchor="middle">
+      <!-- Leaf / Cube Eco symbol -->
+      <g transform="translate(-24, -80)">
+        <rect x="0" y="0" width="48" height="48" rx="14" fill="#E8F5E9" stroke="#81C784" stroke-width="1.5"/>
+        <path d="M24 12 C18 12 14 17 14 24 C21 24 24 20 24 12 Z" fill="#2D6A4F"/>
+        <path d="M24 24 C24 31 29 36 34 36 C34 29 30 24 24 24 Z" fill="#52B788"/>
+      </g>
+      
+      <text y="0" class="hero-title">TutoBox</text>
+      <text y="32" class="hero-subtitle">La plateforme vidéo sobre, sans publicité ni algorithmes de captation</text>
+    </g>
+
+    <!-- Search Box Card (Centered) -->
+    <g transform="translate(360, 360)">
+      <!-- Main Search Container -->
+      <rect x="0" y="0" width="720" height="64" rx="32" fill="#FFFFFF" stroke="#A7D7C5" stroke-width="1.8" filter="url(#card-shadow)"/>
+      
+      <!-- Search Glass Icon -->
+      <g transform="translate(26, 21)" stroke="#52796F" stroke-width="2.2" fill="none" stroke-linecap="round">
+        <circle cx="9" cy="9" r="7"/>
+        <line x1="14.5" y1="14.5" x2="20" y2="20"/>
+      </g>
+
+      <!-- Input Placeholder Text -->
+      <text x="64" y="38" class="placeholder-text">Que souhaitez-vous apprendre aujourd'hui ? (ex: faire du pain, réparer un vélo...)</text>
+
+      <!-- Search Action Button -->
+      <g transform="translate(584, 8)">
+        <rect x="0" y="0" width="126" height="48" rx="24" fill="#1B4332" filter="url(#btn-shadow)"/>
+        <text x="63" y="29" text-anchor="middle" class="btn-text">Rechercher</text>
+      </g>
+    </g>
+
+    <!-- Popular / Sustainable Suggestions under Search Bar -->
+    <g transform="translate(720, 460)" text-anchor="middle">
+      <text x="-210" y="14" font-size="13" font-weight="500" fill="#6B7280">Recherches populaires :</text>
+      
+      <!-- Tag 1 -->
+      <g transform="translate(-125, 0)">
+        <rect x="0" y="0" width="100" height="28" rx="14" fill="#E8F5E9" stroke="#C8E6C9" stroke-width="1"/>
+        <text x="50" y="18" text-anchor="middle" class="tag-text">Bricolage</text>
+      </g>
+
+      <!-- Tag 2 -->
+      <g transform="translate(-15, 0)">
+        <rect x="0" y="0" width="95" height="28" rx="14" fill="#E8F5E9" stroke="#C8E6C9" stroke-width="1"/>
+        <text x="47" y="18" text-anchor="middle" class="tag-text">Cuisine</text>
+      </g>
+
+      <!-- Tag 3 -->
+      <g transform="translate(90, 0)">
+        <rect x="0" y="0" width="115" height="28" rx="14" fill="#E8F5E9" stroke="#C8E6C9" stroke-width="1"/>
+        <text x="57" y="18" text-anchor="middle" class="tag-text">Électronique</text>
+      </g>
+
+      <!-- Tag 4 -->
+      <g transform="translate(215, 0)">
+        <rect x="0" y="0" width="130" height="28" rx="14" fill="#E8F5E9" stroke="#C8E6C9" stroke-width="1"/>
+        <text x="65" y="18" text-anchor="middle" class="tag-text">Jardinage sobre</text>
+      </g>
+    </g>
+
+    <!-- Key Ecological Commitments Pill Grid -->
+    <g transform="translate(360, 530)">
+      <!-- Container -->
+      <rect x="0" y="0" width="720" height="96" rx="12" fill="#FFFFFF" stroke="#E5E9E5" stroke-width="1"/>
+
+      <!-- Feature 1 -->
+      <g transform="translate(30, 24)">
+        <circle cx="16" cy="16" r="16" fill="#F0FDF4"/>
+        <!-- Icon: Leaf -->
+        <path d="M16 10 C12 10 10 13 10 17 C14 17 16 15 16 10 Z" fill="#16A34A"/>
+        <path d="M16 17 C16 22 19 24 22 24 C22 20 20 17 16 17 Z" fill="#22C55E"/>
+        <text x="42" y="15" font-size="13" font-weight="600" fill="#1F2937">100% Sans Pub</text>
+        <text x="42" y="31" font-size="11" fill="#6B7280">Aucun traqueur ni script lourd</text>
+      </g>
+
+      <line x1="245" y1="20" x2="245" y2="76" stroke="#EDF2F7" stroke-width="1"/>
+
+      <!-- Feature 2 -->
+      <g transform="translate(265, 24)">
+        <circle cx="16" cy="16" r="16" fill="#F0FDF4"/>
+        <!-- Icon: Resolution / Eco -->
+        <rect x="8" y="10" width="16" height="12" rx="2" fill="none" stroke="#16A34A" stroke-width="1.8"/>
+        <path d="M14 14 L18 16 L14 18 Z" fill="#16A34A"/>
+        <text x="42" y="15" font-size="13" font-weight="600" fill="#1F2937">Streaming Sobre</text>
+        <text x="42" y="31" font-size="11" fill="#6B7280">Codecs haute efficacité (AV1/VP9)</text>
+      </g>
+
+      <line x1="490" y1="20" x2="490" y2="76" stroke="#EDF2F7" stroke-width="1"/>
+
+      <!-- Feature 3 -->
+      <g transform="translate(510, 24)">
+        <circle cx="16" cy="16" r="16" fill="#F0FDF4"/>
+        <!-- Icon: Shield / Attention -->
+        <path d="M16 8 L23 11 V16 C23 20 19 23 16 24 C13 23 9 20 9 16 V11 Z" fill="none" stroke="#16A34A" stroke-width="1.8"/>
+        <text x="42" y="15" font-size="13" font-weight="600" fill="#1F2937">Zéro Addiction</text>
+        <text x="42" y="31" font-size="11" fill="#6B7280">Pas d'autoplay ni recommandations</text>
+      </g>
+    </g>
+
+  </g>
+
+  <!-- ==================== FOOTER ==================== -->
+  <line x1="0" y1="830" x2="1440" y2="830" class="border-line"/>
+  <rect x="0" y="831" width="1440" height="69" fill="#FFFFFF"/>
+  
+  <g transform="translate(64, 870)">
+    <text x="0" y="0" class="footer-text">© 2026 TutoBox — Projet éco-conçu de partage de tutoriels libres et sobres.</text>
+  </g>
+  
+  <g transform="translate(1376, 870)" text-anchor="end">
+    <text x="0" y="0" class="footer-text">Modèle Freemium éthique • 0 requêtes inutiles • Respect du matériel</text>
+  </g>
+</svg>
+
