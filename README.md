@@ -184,7 +184,7 @@ Le point d'entrée propose une interface épurée centrée sur un champ de reche
 
 #### b. Recherche et filtrage de tutoriels (`/search?q={query}`)
 
-La commande de recherche présente les résultats sous forme de cartes synthétiques allégées, avec des filtres sobres (durée, format, qualité 480p/720p, présence d'une fiche écrite). Chaque résultat affiche explicitement son coût estimé en transfert de données et en émissions carbone.
+La commande de recherche présente les résultats sous forme de cartes synthétiques allégées, avec des filtres sobres (durée, format, qualité 480p/720p, présence d'une fiche écrite). Pour l'affichage de ces résultats, un composant réutilisable « aperçu » est créé et réutilisé pour chaque aperçu de tutoriel, garantissant une cohérence visuelle et une modularité optimale du code. Chaque aperçu affiche explicitement son coût estimé en transfert de données et en émissions carbone.
 
 ![Maquette de la recherche de tutoriels TutoBox](Images/recherche.svg)
 

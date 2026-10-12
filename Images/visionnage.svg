@@ -157,7 +157,7 @@
       
       <!-- Creator Name and Meta -->
       <text x="46" y="15" class="author-name">Chef Sobriété</text>
-      <text x="46" y="31" class="author-sub">Publié il y a 2 mois • Fiche pédagogique incluse • Codec AV1</text>
+      <text x="46" y="31" class="author-sub">Publié il y a 2 mois • Fiche pédagogique incluse • Codec H265</text>
       
       <!-- Subscribe / Soutenir (Freemium creator support) -->
       <g transform="translate(420, 4)">
