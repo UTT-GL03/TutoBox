@@ -80,79 +80,162 @@ TutoBox s'évalue et se positionne face à plusieurs acteurs existants de la vid
 4. **Sélection :** Clique sur le tutoriel qui correspond.
 5. **Résultat :** L'utilisateur sait faire des pâtes.
 
-## Impact de l'exécution des scénarios auprès de différents services concurrents 
+## Impact de l'exécution des scénarios auprès de différents services concurrents
 
 L'EcoIndex d'une page (de A à G) est calculé (à l'aide des outils tels que [EcoIndex](https://www.ecoindex.fr/) ou [GreenIT](https://www.greenit.fr/)) en fonction du positionnement de cette page parmi les pages mondiales concernant:
-  - Le nombre de requêtes lancées
-  - Le poids de la page
-  - Le nombre d'éléments de la page
+
+- Le nombre de requêtes lancées
+- Le poids de la page
+- Le nombre d'éléments de la page
 
 Nous avons donc comparé l'impact des scénarios sur les différents sites qui fournissent un l'accès à des tutoriels: YouTube, tuto.com, Vimeo, DailyMotion, POD UTT.
 
-| Site Web | Score (sur 100) | Classe | Détail des mesures |
-|---|---|---|---|
-| POD UTT | 61/100 | C | [Plus de détails](Benchmark/POD_UTT/EcoIndex-environmental-statement.md) |
-| DailyMotion | 24/100 | F | [Plus de détails](Benchmark/DailyMotion/EcoIndex-environmental-statement.md) |
-| Vimeo | 18/100 | F | [Plus de détails](Benchmark/Vimeo/Ecoindex-environmental-statement.md) |
-| tuto.com | 15/100 | F | [Plus de détails](Benchmark/Tuto.com/EcoIndex-environmental-statement.md) |
-| YouTube | 8/100 | G | [Plus de détails](Benchmark/YouTube/EcoIndex-environmental-statement.md) |
+| Site Web    | Score (sur 100) | Classe | Détail des mesures                                                           |
+| ----------- | --------------- | ------ | ---------------------------------------------------------------------------- |
+| POD UTT     | 61/100          | C      | [Plus de détails](Benchmark/POD_UTT/EcoIndex-environmental-statement.md)     |
+| DailyMotion | 24/100          | F      | [Plus de détails](Benchmark/DailyMotion/EcoIndex-environmental-statement.md) |
+| Vimeo       | 18/100          | F      | [Plus de détails](Benchmark/Vimeo/Ecoindex-environmental-statement.md)       |
+| tuto.com    | 15/100          | F      | [Plus de détails](Benchmark/Tuto.com/EcoIndex-environmental-statement.md)    |
+| YouTube     | 8/100           | G      | [Plus de détails](Benchmark/YouTube/EcoIndex-environmental-statement.md)     |
 
 **Tab 1:** Mesure de l'EcoIndex moyen des service fournissant l'accès aux tutoriels.
 
 Les mesures de l'impact de ces services révèlent des disparités notables : les plateformes commerciales grand public présentent des classes EcoIndex très faibles (F, et G pour YouTube), tandis qu'une plateforme sobre comme POD UTT atteint la classe C (61/100).
 
 Dans le détail, les pages les plus mal classées sont celles qui incluent:
-  
-  - Des vidéos
-  - Des designs graphiques très lourds
-  - Des traqueurs en très grand nombre
-  - Des publicités en grand nombre 
+
+- Des vidéos
+- Des designs graphiques très lourds
+- Des traqueurs en très grand nombre
+- Des publicités en grand nombre
 
 Il est donc nécessaires d'appliquer des pratiques d'écoconception et un modèle économique permettant de réduire le recours à des services publiciataires et de traqueurs.
 
-## Modèle économique 
+## Modèle économique
 
-Comme nous l'avons vu dans la section précédente, parmi les choix de conception ayant un important impact environnemental, la plupart sont directement liés au modèle économique du service. C'est pourquoi il est donc nécessaire d'effectuer une analyse profonde de ces modèles économiques afin de choisir un meilleur modèle économique pour la conception de notre projet. 
+Comme nous l'avons vu dans la section précédente, parmi les choix de conception ayant un important impact environnemental, la plupart sont directement liés au modèle économique du service. C'est pourquoi il est donc nécessaire d'effectuer une analyse profonde de ces modèles économiques afin de choisir un meilleur modèle économique pour la conception de notre projet.
 
-En effet, le monde du streaming vidéo est un domaine assez capitaliste où la réalisation des profits passe avant la réduction de l'impact environnementale du produit. Au vue de la concurrence dans ce secteur chaque plateforme de streaming vidéo ou de tutoriels disposent de son propre modèle économique afin d'attirer le plus d'utilisateurs. 
+En effet, le monde du streaming vidéo est un domaine assez capitaliste où la réalisation des profits passe avant la réduction de l'impact environnementale du produit. Au vue de la concurrence dans ce secteur chaque plateforme de streaming vidéo ou de tutoriels disposent de son propre modèle économique afin d'attirer le plus d'utilisateurs.
 
-
-| Plateforme | Modèle d'accès | Source de financement | Publicités & Traqueurs |
-|---|---|---|---|
-| **YouTube** | Gratuit / Freemium (*YouTube Premium*) | Publicités ciblées (Google Ads), abonnements payants | Publicités omniprésentes, traçage massif |
-| **DailyMotion** | Gratuit | Publicités vidéo (régies tierces) | Publicités pré/mid-roll, traqueurs tiers |
-| **Vimeo** | Freemium | Abonnements créateurs et entreprises | Aucune publicité tierce sur les vidéos |
-| **tuto.com** | Payant (à l'acte ou abonnement) | Achat direct de formations, abonnements | Absence de traqueurs publicitaires tiers |
-| **POD UTT** | Gratuit | Financement public / institutionnel (université) | Aucune publicité, aucun traqueur |
+| Plateforme      | Modèle d'accès                         | Source de financement                                | Publicités & Traqueurs                   |
+| --------------- | -------------------------------------- | ---------------------------------------------------- | ---------------------------------------- |
+| **YouTube**     | Gratuit / Freemium (_YouTube Premium_) | Publicités ciblées (Google Ads), abonnements payants | Publicités omniprésentes, traçage massif |
+| **DailyMotion** | Gratuit                                | Publicités vidéo (régies tierces)                    | Publicités pré/mid-roll, traqueurs tiers |
+| **Vimeo**       | Freemium                               | Abonnements créateurs et entreprises                 | Aucune publicité tierce sur les vidéos   |
+| **tuto.com**    | Payant (à l'acte ou abonnement)        | Achat direct de formations, abonnements              | Absence de traqueurs publicitaires tiers |
+| **POD UTT**     | Gratuit                                | Financement public / institutionnel (université)     | Aucune publicité, aucun traqueur         |
 
 **Tab. 2 :** Offre des services de diffusion vidéo et tutoriels.
 
 Les offres de service numérique des plateformes de vidéo et de tutoriels (cf. Tab. 2) se sont principalement polarisées autour de deux modèles :
+
 - un accès gratuit financé par la publicité et la captation de l'attention (YouTube, DailyMotion), qui génère une surcharge de requêtes, des traqueurs invasifs et une course aux clics écologiquement insoutenable ;
 - un accès payant (par abonnement ou achat unitaire comme tuto.com et Vimeo) ou institutionnel (POD UTT), qui élimine les traqueurs publicitaires mais peut représenter une barrière d'entrée immédiate pour les apprenants.
 
 Afin de concilier accessibilité, pérennité et sobriété numérique, **TutoBox** fait le choix d'exclure totalement la publicité et propose un modèle de type **Freemium avec période d'essai** :
+
 - **Période d'essai pour les apprenants :** Les utilisateurs peuvent accéder gratuitement au système de façon limitée pendant une période d'essai d'**une semaine avec 10 vidéos incluses** ;
 - **Abonnement standard :** S'ils souhaitent visionner davantage de vidéos, l'accès bascule sur un système d'abonnement standard à prix modéré (**7 € / mois**) ;
 - **Exonération pour les créateurs :** Les créateurs de contenu sont totalement exonérés de cette limite pour publier des vidéos ;
-- **Gratification par paliers (*milestones*) :** Si les créateurs atteignent un certain palier (*milestones*), ils peuvent accéder à toute la plateforme gratuitement.
+- **Gratification par paliers (_milestones_) :** Si les créateurs atteignent un certain palier (_milestones_), ils peuvent accéder à toute la plateforme gratuitement.
 
-| Source de revenus | Montant unitaire | Quantité nécessaire pour financer un salaire[^1] |
-|---|---|---|
-| **Abonnement standard** | 7 € [^2] | 501 |
+| Source de revenus       | Montant unitaire | Quantité nécessaire pour financer un salaire[^1] |
+| ----------------------- | ---------------- | ------------------------------------------------ |
+| **Abonnement standard** | 7 € [^2]         | 501                                              |
 
 **Tab. 3 :** Source de revenus retenue pour le service TutoBox.
 
 L'étude de l'offre des plateformes existantes (cf. Tab. 2) et l'évaluation des besoins financiers (cf. Tab. 3) nous ont permis d'établir que :
+
 - le recours à la publicité est incompatible avec les objectifs de sobriété de TutoBox : il dégrade drastiquement le score EcoIndex, alourdit les pages en scripts de traçage et incite structurellement au visionnage compulsif ;
 - un modèle économique sain et 100 % sans publicité est pleinement viable : avec un abonnement standard accessible fixé à 7 €, seuls **501 abonnements** sont nécessaires pour financer le salaire médian d'un employé (3 507 €) ;
-- l'exonération des créateurs et l'accès gratuit par paliers (*milestones*) encouragent l'enrichissement de la plateforme en tutoriels de qualité tout en maintenant un modèle équilibré et autonome.
+- l'exonération des créateurs et l'accès gratuit par paliers (_milestones_) encouragent l'enrichissement de la plateforme en tutoriels de qualité tout en maintenant un modèle équilibré et autonome.
 
 Par conséquent, pour réduire drastiquement l'impact écologique du service tout en garantissant sa viabilité économique, nous proposons de :
+
 - renoncer totalement et définitivement à toute forme de publicité et de traqueurs ;
 - baser le modèle de financement exclusivement sur l'abonnement standard (7 € / mois) ;
 - instaurer une période d'essai gratuite et sobre (1 semaine avec 10 vidéos incluses) pour faciliter l'accès initial aux savoirs ;
-- exonérer les créateurs de limites pour publier des tutoriels et leur offrir la gratuité complète dès l'atteinte de jalons (*milestones*).
+- exonérer les créateurs de limites pour publier des tutoriels et leur offrir la gratuité complète dès l'atteinte de jalons (_milestones_).
 
 [^1]: Basé sur un salaire médian chargé estimé à 3 507 € pour financer un employé.
+
 [^2]: Montant unitaire de l'abonnement standard TutoBox (3 507 € / 7 € = 501 abonnements nécessaires).
+
+---
+
+## Maquette de l'interface et échantillon de données
+
+Au vu des différents services comparés, des exigences environnementales exprimées plus haut et des scénarios retenus, nous avons défini pour notre prototype une maquette de l'interface et un échantillon de données réalistes.
+
+Les ressources Web possédant une représentation sur notre application sont structurées autour des objets métiers suivants :
+
+- **Le point d'entrée du service** (avec une HTTP-URI ayant pour chemin `/`) ;
+- **La recherche et filtrage de tutoriels**, accessible via la commande de recherche `search` (avec pour chemin `/search?q={query}`), ou plus spécifiquement filtrée par rubrique thématique (`/search?topic={name}`) ou par créateur (`/search?creator={name}`) ;
+- **Le tutoriel** (avec pour chemin `/tutorials/{id}`), représentant l'objet métier central du tutoriel avec son lecteur vidéo éco-conçu, ses métadonnées techniques, son indicateur d'impact environnemental et sa fiche textuelle synthétique.
+
+### Maquettes de l'interface
+
+#### a. Point d'entrée sobre (`/`)
+
+Le point d'entrée propose une interface épurée centrée sur un champ de recherche direct, des raccourcis vers les thématiques sobres courantes et un rappel des engagements écologiques du service, sans flux vidéo en arrière-plan ni recommandations superflues.
+
+![Maquette du point d'entrée TutoBox](Images/pointEntrée.svg)
+
+#### b. Recherche et filtrage de tutoriels (`/search?q={query}`)
+
+La commande de recherche présente les résultats sous forme de cartes synthétiques allégées, avec des filtres sobres (durée, format, qualité 480p/720p, présence d'une fiche écrite). Chaque résultat affiche explicitement son coût estimé en transfert de données et en émissions carbone.
+
+![Maquette de la recherche de tutoriels TutoBox](Images/recherche.svg)
+
+#### c. Consultation et visionnage d'un tutoriel (`/tutorials/{id}`)
+
+Le tutoriel intègre un lecteur sans lecture automatique (_autoplay_), diffusant par défaut en résolution éco (480p) avec bascule en flux audio seul et coupure automatique lorsque l'onglet est inactif. Une fiche résumée étape par étape permet d'accéder directement à l'information sans charger l'intégralité du média vidéo.
+
+![Maquette du visionnage de tutoriel TutoBox](Images/visionnage.svg)
+
+**Fig. 1 :** Maquette de l'interface du prototype : a. Point d'entrée sobre (`/`), b. Recherche et filtrage de tutoriels (`/search?q={query}`), c. Consultation et visionnage d'un tutoriel (`/tutorials/{id}`).
+
+### Échantillon et modèle de données
+
+Dans un objectif de sobriété environnementale, les tutoriels sont pour l'instant limités à un échantillon restreint et représentatif (soit 20 à 30 tutoriels ciblant les scénarios pratiques : cuisine sobre, réparation, bricolage, jardinage).
+
+Pour des raisons de respect des droits d'auteurs, nous utilisons des données générées (inspirées de [dummyjson](https://dummyjson.com)). Bien que fictives, ces données correspondent rigoureusement à la structure des services concurrents et aux exigences de sobriété : chaque tutoriel comporte un titre explicite, un créateur (auteur), une rubrique thématique, une durée, une transcription textuelle synthétique, ainsi que des métadonnées de consommation énergétique :
+
+```json
+{
+  "tutorials": [
+    {
+      "id": 1,
+      "title": "Tutoriel : Pâtes fraîches maison sans machine (Farine & Œufs)",
+      "creator": {
+        "id": 42,
+        "name": "Cuisine Sobre & Locale",
+        "subscribers": 12400
+      },
+      "category": "Cuisine",
+      "duration_seconds": 275,
+      "views_count": 1420,
+      "ratings": {
+        "positive_percentage": 98,
+        "likes": 342,
+        "dislikes": 8
+      },
+      "eco_metrics": {
+        "default_resolution": "480p",
+        "data_transferred_mb": 12.4,
+        "co2e_grams": 0.8,
+        "codecs": ["H265"],
+        "has_audio_only": true
+      },
+      "written_guide": [
+        "1. Dosage : 100 g de farine de blé et 1 œuf par personne.",
+        "2. Pétrissage : Travailler la pâte fermement pendant 8 à 10 minutes jusqu'à obtention d'une boule homogène.",
+        "3. Repos : Laisser reposer 30 minutes sous un linge propre à température ambiante.",
+        "4. Découpe : Abaisser finement au rouleau et découper au couteau selon la largeur souhaitée (tagliatelles).",
+        "5. Cuisson : Plonger 2 à 3 minutes dans une eau bouillante salée."
+      ]
+    }
+  ]
+}
+```
