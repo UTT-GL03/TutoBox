@@ -198,44 +198,7 @@ Le tutoriel intègre un lecteur sans lecture automatique (_autoplay_), diffusant
 
 ### Échantillon et modèle de données
 
-Dans un objectif de sobriété environnementale, les tutoriels sont pour l'instant limités à un échantillon restreint et représentatif (soit 20 à 30 tutoriels ciblant les scénarios pratiques : cuisine sobre, réparation, bricolage, jardinage).
+Dans un objectif de sobriété environnementale, les tutoriels sont pour l'instant limités à un échantillon restreint et représentatif (soit `20` à `30` tutoriels ciblant les scénarios pratiques : cuisine sobre, réparation, bricolage, jardinage).
 
-Pour des raisons de respect des droits d'auteurs, nous utilisons des données générées (inspirées de [dummyjson](https://dummyjson.com)). Bien que fictives, ces données correspondent rigoureusement à la structure des services concurrents et aux exigences de sobriété : chaque tutoriel comporte un titre explicite, un créateur (auteur), une rubrique thématique, une durée, une transcription textuelle synthétique, ainsi que des métadonnées de consommation énergétique :
-
-```json
-{
-  "tutorials": [
-    {
-      "id": 1,
-      "title": "Tutoriel : Pâtes fraîches maison sans machine (Farine & Œufs)",
-      "creator": {
-        "id": 42,
-        "name": "Cuisine Sobre & Locale",
-        "subscribers": 12400
-      },
-      "category": "Cuisine",
-      "duration_seconds": 275,
-      "views_count": 1420,
-      "ratings": {
-        "positive_percentage": 98,
-        "likes": 342,
-        "dislikes": 8
-      },
-      "eco_metrics": {
-        "default_resolution": "480p",
-        "data_transferred_mb": 12.4,
-        "co2e_grams": 0.8,
-        "codecs": ["H265"],
-        "has_audio_only": true
-      },
-      "written_guide": [
-        "1. Dosage : 100 g de farine de blé et 1 œuf par personne.",
-        "2. Pétrissage : Travailler la pâte fermement pendant 8 à 10 minutes jusqu'à obtention d'une boule homogène.",
-        "3. Repos : Laisser reposer 30 minutes sous un linge propre à température ambiante.",
-        "4. Découpe : Abaisser finement au rouleau et découper au couteau selon la largeur souhaitée (tagliatelles).",
-        "5. Cuisson : Plonger 2 à 3 minutes dans une eau bouillante salée."
-      ]
-    }
-  ]
-}
-```
+Pour des raisons de respect des droits d'auteurs, nous utilisons des données générées (avec [`dummy-json`](https://github.com/webroo/dummy-json/blob/master/README.md)).
+Bien que fictives, ces données correspondent rigoureusement à la structure des services concurrents et aux exigences de sobriété : chaque tutoriel comporte un titre (`heading`), une rubrique (`section`), une date de publication (`issued`), des informations sur l'auteur (`creator`), une durée (`duration_seconds`), des métriques d'impact écologique (`eco_metrics` : résolution par défaut, volume transféré en Mo, émissions gCO₂e évitées, codecs et bascule audio seul), des évaluations communautaires (`ratings`), ainsi qu'une fiche pratique découpée par étapes (`written_guide`) permettant l'apprentissage sans charger le média vidéo (voir [modèle de données](sample_data.hbs)).

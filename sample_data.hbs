@@ -1,0 +1,34 @@
+{
+  "tutorials": [
+    {{#repeat min=20 max=30}}
+    {
+      "id": {{add @index 1}},
+      "heading": "{{lorem min=3 max=15}}",
+      "section": "{{random 'Cuisine' 'Bricolage' 'Réparation' 'Jardinage' 'Informatique' 'Couture' 'Low-tech' 'Énergie'}}",
+      "issued": "{{date '2024-10-01' '2024-10-12' 'YYYY-MM-DD hh:mm'}}",
+      "creator": {
+        "name": "{{firstName}} {{lastName}}",
+        "subscribers": {{int 500 50000}}
+      },
+      "duration_seconds": {{int 120 1800}},
+      "views_count": {{int 100 25000}},
+      "ratings": {
+        "likes": {{int 20 1200}},
+        "dislikes": {{int 0 40}}
+      },
+      "eco_metrics": {
+        "default_resolution": "{{random '480p' '720p'}}",
+        "data_transferred_mb": {{float 4.0 35.0 round=0.1}},
+        "co2e_grams": {{float 0.2 2.5 round=0.1}},
+        "codecs": ["{{random 'H265' 'VP9' 'AV1'}}"],
+        "has_audio_only": true
+      },
+      "written_guide": [
+        {{#repeat min=3 max=6}}
+        "Étape {{add @index 1}} : {{lorem min=6 max=20}}"
+        {{/repeat}}
+      ]
+    }
+    {{/repeat}}
+  ]
+}
