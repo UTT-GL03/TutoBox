@@ -120,3 +120,44 @@ Pour ce qui est des modèles économiques des services numériques des plateform
 
   - un accès gratuit à certaines vidéos, financé par la publicité,
   - un accès à l'ensemble des vidéos de la plateforme, réservé aux abonnés
+
+
+| Plateforme | Modèle d'accès | Source de financement | Publicités & Traqueurs |
+|---|---|---|---|
+| **YouTube** | Gratuit / Freemium (*YouTube Premium*) | Publicités ciblées (Google Ads), abonnements payants | Publicités omniprésentes, traçage massif |
+| **DailyMotion** | Gratuit | Publicités vidéo (régies tierces) | Publicités pré/mid-roll, traqueurs tiers |
+| **Vimeo** | Freemium | Abonnements créateurs et entreprises | Aucune publicité tierce sur les vidéos |
+| **tuto.com** | Payant (à l'acte ou abonnement) | Achat direct de formations, abonnements | Absence de traqueurs publicitaires tiers |
+| **POD UTT** | Gratuit | Financement public / institutionnel (université) | Aucune publicité, aucun traqueur |
+
+**Tab. 2 :** Offre des services de diffusion vidéo et tutoriels.
+
+Les offres de service numérique des plateformes de vidéo et de tutoriels (cf. Tab. 2) se sont principalement polarisées autour de deux modèles :
+- un accès gratuit financé par la publicité et la captation de l'attention (YouTube, DailyMotion), qui génère une surcharge de requêtes, des traqueurs invasifs et une course aux clics écologiquement insoutenable ;
+- un accès payant (par abonnement ou achat unitaire comme tuto.com et Vimeo) ou institutionnel (POD UTT), qui élimine les traqueurs publicitaires mais peut représenter une barrière d'entrée immédiate pour les apprenants.
+
+Afin de concilier accessibilité, pérennité et sobriété numérique, **TutoBox** fait le choix d'exclure totalement la publicité et propose un modèle de type **Freemium avec période d'essai** :
+- **Période d'essai pour les apprenants :** Les utilisateurs peuvent accéder gratuitement au système de façon limitée pendant une période d'essai d'**une semaine avec 10 vidéos incluses** ;
+- **Abonnement standard :** S'ils souhaitent visionner davantage de vidéos, l'accès bascule sur un système d'abonnement standard à prix modéré (**7 € / mois**) ;
+- **Exonération pour les créateurs :** Les créateurs de contenu sont totalement exonérés de cette limite pour publier des vidéos ;
+- **Gratification par paliers (*milestones*) :** Si les créateurs atteignent un certain palier (*milestones*), ils peuvent accéder à toute la plateforme gratuitement.
+
+| Source de revenus | Montant unitaire | Quantité nécessaire pour financer un salaire[^1] |
+|---|---|---|
+| **Abonnement standard** | 7 € [^2] | 501 |
+
+**Tab. 3 :** Source de revenus retenue pour le service TutoBox.
+
+L'étude de l'offre des plateformes existantes (cf. Tab. 2) et l'évaluation des besoins financiers (cf. Tab. 3) nous ont permis d'établir que :
+- le recours à la publicité est incompatible avec les objectifs de sobriété de TutoBox : il dégrade drastiquement le score EcoIndex, alourdit les pages en scripts de traçage et incite structurellement au visionnage compulsif ;
+- un modèle économique sain et 100 % sans publicité est pleinement viable : avec un abonnement standard accessible fixé à 7 €, seuls **501 abonnements** sont nécessaires pour financer le salaire médian d'un employé (3 507 €) ;
+- l'exonération des créateurs et l'accès gratuit par paliers (*milestones*) encouragent l'enrichissement de la plateforme en tutoriels de qualité tout en maintenant un modèle équilibré et autonome.
+
+Par conséquent, pour réduire drastiquement l'impact écologique du service tout en garantissant sa viabilité économique, nous proposons de :
+- renoncer totalement et définitivement à toute forme de publicité et de traqueurs ;
+- baser le modèle de financement exclusivement sur l'abonnement standard (7 € / mois) ;
+- instaurer une période d'essai gratuite et sobre (1 semaine avec 10 vidéos incluses) pour faciliter l'accès initial aux savoirs ;
+- exonérer les créateurs de limites pour publier des tutoriels et leur offrir la gratuité complète dès l'atteinte de jalons (*milestones*).
+
+[^1]: Basé sur un salaire médian chargé estimé à 3 507 € pour financer un employé.
+[^2]: Montant unitaire de l'abonnement standard TutoBox (3 507 € / 7 € = 501 abonnements nécessaires).
