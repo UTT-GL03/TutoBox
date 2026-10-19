@@ -1,3 +1,4 @@
+import { Link } from 'react-router'
 import dayjs from 'dayjs'
 import relativeTime from 'dayjs/plugin/relativeTime'
 import 'dayjs/locale/fr'
@@ -23,14 +24,16 @@ function Tutorials() {
   )
 }
 
-function TutorialPreview({heading, issued, section}) {
+function TutorialPreview({id, heading, issued, section}) {
   return (
     <article>
       <header>
         <span className="tag"> {section} </span>
         <time> {dayjs(issued).fromNow()} </time>
       </header>
-      <h2>{heading}</h2>
+      <Link to={`/tutorials/${id}`}>
+        <h2>{heading}</h2>
+      </Link>
     </article>
   )
 }

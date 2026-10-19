@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router'
 import reactLogo from './assets/react.svg'
 import Tutorials from './Tutorials'
+import Tutorial from './Tutorial'
 import './App.css'
 
 function App() {
@@ -14,6 +15,8 @@ function App() {
       </header>
       <Routes>
         <Route path="/" element={<Tutorials/>} />
+        <Route path="/tutorials/:id" element={<Tutorial/>} />
+        <Route path="/:id" element={<Tutorial/>} />
       </Routes>
     </BrowserRouter>
   )
