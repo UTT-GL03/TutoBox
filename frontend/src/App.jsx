@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router'
+import { BrowserRouter, Routes, Route, Link } from 'react-router'
 import reactLogo from './assets/react.svg'
 import Tutorials from './Tutorials'
 import Tutorial from './Tutorial'
@@ -8,10 +8,12 @@ function App() {
   return (
     <BrowserRouter>
       <header>
-        <h1>
-          <img src={reactLogo}/>
-          TutoBox
-        </h1>
+        <Link to="/">
+          <h1>
+            <img src={reactLogo}/>
+            TutoBox
+          </h1>
+        </Link>
       </header>
       <Routes>
         <Route path="/" element={<Tutorials/>} />
