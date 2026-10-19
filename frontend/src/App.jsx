@@ -1,8 +1,10 @@
 import reactLogo from './assets/react.svg'
 import data from './assets/sample_data.json'
 import './App.css'
-
 function App() {
+  const tutorialsByRow = Object.values(
+    Object.groupBy(data.tutorials, (x, i) => Math.floor(i/3))
+  )
   return (
     <>
       <header>
@@ -12,8 +14,12 @@ function App() {
         </h1>
       </header>
       <main className="container">
-        {data.tutorials.map((x, i) =>
-          <TutorialPreview {...x} key={i} />
+        {tutorialsByRow.map((x, i) =>
+          <div key={i} className="grid">
+            {x.map((y, j) =>
+              <TutorialPreview {...y} key={j} />
+            )}
+          </div>
         )}
       </main>
     </>
