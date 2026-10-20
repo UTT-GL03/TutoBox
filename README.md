@@ -203,9 +203,9 @@ Dans un objectif de sobriété environnementale, les tutoriels sont pour l'insta
 Pour des raisons de respect des droits d'auteurs, nous utilisons des données générées (avec [`dummy-json`](https://github.com/webroo/dummy-json/blob/master/README.md)).
 Bien que fictives, ces données correspondent rigoureusement à la structure des services concurrents et aux exigences de sobriété : chaque tutoriel comporte un titre (`heading`), une rubrique (`section`), une date de publication (`issued`), des informations sur l'auteur (`creator`), une durée (`duration_seconds`), des métriques d'impact écologique (`eco_metrics` : résolution par défaut, volume transféré en Mo, émissions gCO₂e évitées, codecs et bascule audio seul), des évaluations communautaires (`ratings`), ainsi qu'une fiche pratique découpée par étapes (`written_guide`) permettant l'apprentissage sans charger le média vidéo (voir [modèle de données](sample_data.hbs)).
 
-### Implémentation du scénario prioritaire
+## Implémentation du scénario prioritaire
 
-#### Étape de prototypage: Données chargées de manière statique
+### Étape de prototypage: Données chargées de manière statique
 
 Pour cette première version du prototype (v1.0.0), nous avons les caractéristiques suivantes:
 
@@ -214,7 +214,7 @@ Pour cette première version du prototype (v1.0.0), nous avons les caractéristi
 
 Ce scénario nécessite de pouvoir naviguer entre deux types de page: la page d'accueil (le point d'entrée sobre) et la page de consultation et de visionnage du tutoriel.
 
-#### Point d'entrée sobre (La page d'accueil)
+### Point d'entrée sobre (La page d'accueil)
 
 La page de titre que nous avons développé se rapproche de la maquette que nous avions préalablement mis sur pied.
 
@@ -235,4 +235,4 @@ L'analyse de notre fichier de configuration met en lumière une pile technique m
 
 Tab.4: Évaluation de l'impact du prototype de la page d'accueil.
 
-#### Page de visualisation des tutoriels
+### Page de visualisation des tutoriels
