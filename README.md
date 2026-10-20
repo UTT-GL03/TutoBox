@@ -217,3 +217,22 @@ Ce scénario nécessite de pouvoir naviguer entre deux types de page: la page d'
 #### Point d'entrée sobre (La page d'accueil)
 
 La page de titre que nous avons développé se rapproche de la maquette que nous avions préalablement mis sur pied.
+
+![page d'accueil du prototype](/Images/page_accueil_prototype.png)
+
+Fig.2: Prototype de la page d'accueil
+
+Pour concevoir l'interface de notre application de tutoriels, nous avons opté pour PicoCSS (version 2.1.1), un framework minimaliste qui allège considérablement le poids des feuilles de style par rapport à des solutions plus denses. Nous pourrons réévaluer l'impact écologique de ce choix si l'intégration future d'un outil plus lourd s'avère indispensable.   
+
+Dans une démarche d'écoconception et de sobriété numérique, nous avons choisi de proscrire les illustrations et photographies sur la page d'accueil, à l'inverse des standards actuels du marché. Bien que ces visuels captent l'attention, ils s'avèrent superflus pour accéder directement aux titres des tutoriels dans cette version minimale. L'ajout d'images nécessiterait des requêtes HTTP supplémentaires et des stratégies d'optimisation complexes (telles que le multiplexage HTTP/2 ou les sprites CSS) dont le rapport coût-bénéfice environnemental reste discutable.
+
+L'analyse de notre fichier de configuration met en lumière une pile technique moderne et resserrée autour de React (v19.3.1) et de React Router (v8.4.0) pour la navigation, secondés par DayJS (v1.11.23) pour un traitement léger des dates. Même si la couche de données dynamique reste à intégrer, l'évaluation énergétique du prototype est d'ores et déjà très satisfaisante. Grâce au bundler ultra-rapide Vite (v8.3.4) et à son moteur Rolldown, le code bénéficie d'une minification rigoureuse et d'une concaténation optimale des modules, réduisant ainsi l'empreinte de l'application tant en phase de développement qu'en pré-production.
+
+|  | **EcoIndex** | **GES (gCO2e)** | **Taille du DOM** | **Requêtes** | **Taille de la page (Ko)** |
+|---|---|---|---|---|---|
+| Mode "développement" |72 B | 1.56 | 172 | 25 | 5600 |
+| Mode "pré-production" | 89 A| 1.83 | 171 | 4 | 108 |
+
+Tab.4: Évaluation de l'impact du prototype de la page d'accueil.
+
+#### Page de visualisation des tutoriels
