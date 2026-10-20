@@ -220,7 +220,7 @@ La page de titre que nous avons développé se rapproche de la maquette que nous
 
 ![page d'accueil du prototype](/Images/page_accueil_prototype.png)
 
-Fig.2: Prototype de la page d'accueil
+**Fig.2:** Prototype de la page d'accueil
 
 Pour concevoir l'interface de notre application de tutoriels, nous avons opté pour PicoCSS (version 2.1.1), un framework minimaliste qui allège considérablement le poids des feuilles de style par rapport à des solutions plus denses. Nous pourrons réévaluer l'impact écologique de ce choix si l'intégration future d'un outil plus lourd s'avère indispensable.   
 
@@ -233,6 +233,6 @@ L'analyse de notre fichier de configuration met en lumière une pile technique m
 | Mode "développement" |72/100 | B | 1.56 | 172 | 25 | 5600 |
 | Mode "pré-production" | 89/100 | A | 1.83 | 171 | 4 | 108 |
 
-Tab.4: Évaluation de l'impact du prototype de la page d'accueil.
+**Tab.4:** Évaluation de l'impact du prototype de la page d'accueil.
 
 ### Page de visualisation des tutoriels
