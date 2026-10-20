@@ -228,10 +228,10 @@ Dans une démarche d'écoconception et de sobriété numérique, nous avons choi
 
 L'analyse de notre fichier de configuration met en lumière une pile technique moderne et resserrée autour de React (v19.3.1) et de React Router (v8.4.0) pour la navigation, secondés par DayJS (v1.11.23) pour un traitement léger des dates. Même si la couche de données dynamique reste à intégrer, l'évaluation énergétique du prototype est d'ores et déjà très satisfaisante. Grâce au bundler ultra-rapide Vite (v8.3.4) et à son moteur Rolldown, le code bénéficie d'une minification rigoureuse et d'une concaténation optimale des modules, réduisant ainsi l'empreinte de l'application tant en phase de développement qu'en pré-production.
 
-|  | **EcoIndex** | **GES (gCO2e)** | **Taille du DOM** | **Requêtes** | **Taille de la page (Ko)** |
-|---|---|---|---|---|---|
-| Mode "développement" |72 B | 1.56 | 172 | 25 | 5600 |
-| Mode "pré-production" | 89 A| 1.83 | 171 | 4 | 108 |
+|  | **EcoIndex** |**EcoIndex score** | **GES (gCO2e)** | **Taille du DOM** | **Requêtes** | **Taille de la page (Ko)** |
+|---|---|---|---|---|---|---|
+| Mode "développement" |72/100 | B | 1.56 | 172 | 25 | 5600 |
+| Mode "pré-production" | 89/100 | A | 1.83 | 171 | 4 | 108 |
 
 Tab.4: Évaluation de l'impact du prototype de la page d'accueil.
 
