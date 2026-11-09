@@ -247,8 +247,9 @@ De même que précédemment, nous avons tenté d'implémenter cette page (cf. Fi
 
 |  | **EcoIndex** |**EcoIndex score** | **GES (gCO2e)** | **Taille du DOM** | **Requêtes** | **Taille de la page (Ko)** |
 |---|---|---|---|---|---|---|
-| Mode "développement" | - | - | - | - | - | - |
-| Mode "pré-production" | - | - | - | - | - | - |
+| Rechercher la vidéo souhaité| 92 | A | 1.17 | 182 | 24 | 5600 |
+| Trouver la vidéo du tutoriel| 98 | A | 1.03 | 32 | 114 | 5300 |
+| Ouvrir la vidéo et visionner | 98 | A | 1.03 | 32 | 114 | 5300 |
 
 **Tab.5:** Évaluation de l'impact du prototype de la page de consultation d'un tutoriel (v1.0.0).
 
