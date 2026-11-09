@@ -236,3 +236,7 @@ L'analyse de notre fichier de configuration met en lumière une pile technique m
 **Tab.4:** Évaluation de l'impact du prototype de la page d'accueil.
 
 ### Page de visualisation des tutoriels
+
+Les pages des tutoriels ont pour forme http://localhost:5173/tutorials/{id}. Comme l'échantillon de données comportait déjà des ids, chaque tutoriel peut directement être déterminé par leurs identifiants (par exemple http://localhost:5173/tutorials/3).
+
+De même que précédemment, nous avons tenté d'implémenter cette page (cf. Fig. 3) conformément à ce que prévoyait la maquette. 
