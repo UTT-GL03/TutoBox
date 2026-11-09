@@ -1,15 +1,23 @@
+import { useState, useEffect } from 'react'
 import { Link } from 'react-router'
 import dayjs from 'dayjs'
 import relativeTime from 'dayjs/plugin/relativeTime'
 import 'dayjs/locale/fr'
-import data from './assets/sample_data.json'
 
 dayjs.extend(relativeTime)
 dayjs.locale('fr')
 
 function Tutorials() {
+  const [tutorials, setTutorials] = useState([])
+
+  useEffect(() => {
+    fetch('/sample_data.json')
+      .then(response => response.json())
+      .then(data => setTutorials(data.tutorials || []))
+  }, [])
+
   const tutorialsByRow = Object.values(
-    Object.groupBy(data.tutorials, (x, i) => Math.floor(i/3))
+    Object.groupBy(tutorials, (x, i) => Math.floor(i/3))
   )
   return (
     <main className="container">

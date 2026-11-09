@@ -1,15 +1,37 @@
+import { useState, useEffect } from 'react'
 import { useParams } from 'react-router'
 import dayjs from 'dayjs'
 import localizedFormat from 'dayjs/plugin/localizedFormat'
 import 'dayjs/locale/fr'
-import data from './assets/sample_data.json'
 
 dayjs.extend(localizedFormat)
 dayjs.locale('fr')
 
 function Tutorial() {
   const {id} = useParams()
-  const tutorial = data.tutorials.find(x => String(x.id) === String(id) || x.issued === id)
+  const [tutorial, setTutorial] = useState(null)
+  const [loading, setLoading] = useState(true)
+
+  useEffect(() => {
+    fetch('/sample_data.json')
+      .then(response => response.json())
+      .then(data => {
+        const item = data.tutorials.find(x => String(x.id) === String(id) || x.issued === id)
+        setTutorial(item)
+        setLoading(false)
+      })
+      .catch(() => {
+        setLoading(false)
+      })
+  }, [id])
+
+  if (loading) {
+    return (
+      <main className="container">
+        <p>Chargement du tutoriel...</p>
+      </main>
+    )
+  }
 
   if (!tutorial) {
     return (
@@ -51,4 +73,3 @@ function Tutorial() {
 }
 
 export default Tutorial
-

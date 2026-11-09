@@ -236,3 +236,40 @@ L'analyse de notre fichier de configuration met en lumière une pile technique m
 **Tab.4:** Évaluation de l'impact du prototype de la page d'accueil.
 
 ### Page de visualisation des tutoriels
+
+La page de consultation permet d'accéder au détail d'un tutoriel sélectionné (fiche pratique étape par étape, métriques écologiques, informations sur l'auteur).
+
+|  | **EcoIndex** |**EcoIndex score** | **GES (gCO2e)** | **Taille du DOM** | **Requêtes** | **Taille de la page (Ko)** |
+|---|---|---|---|---|---|---|
+| Mode "développement" | - | - | - | - | - | - |
+| Mode "pré-production" | - | - | - | - | - | - |
+
+**Tab.5:** Évaluation de l'impact du prototype de la page de consultation d'un tutoriel (v1.0.0).
+
+---
+
+### Étape de prototypage : Données chargées de manière dynamique (v1.0.1)
+
+Pour cette seconde version du prototype (v1.0.1), l'objectif est d'effectuer la transition d'un modèle statique intégré à la compilation vers un chargement dynamique asynchrone des données, représentatif d'une architecture client-serveur éco-conçue :
+
+- **Découplage des données et du bundle applicatif** : L'échantillon de données (`sample_data.json`) a été extrait des composants React et déplacé dans le répertoire `public/` afin d'être servi comme ressource statique accessible via une URL HTTP.
+- **Récupération asynchrone (`fetch`) et promesses (`Promise.then`)** : Les composants interrogent désormais la ressource via l'API standard `fetch('/sample_data.json')` de façon non-bloquante pour le navigateur.
+- **Cycle de vie et réactivité (`useEffect` & `useState`)** :
+  - `useEffect()` orchestre le déclenchement de la requête au montage du composant dans le DOM (avec un tableau de dépendances vide `[]` pour la page d'accueil et dépendant de l'identifiant `[id]` pour la page de consultation de tutoriel).
+  - `useState()` stocke les données reçues. Contrairement à une variable JavaScript ordinaire, la modification d'un état React notifie le moteur de rendu et déclenche la mise à jour réactive de l'interface utilisateur dès la résolution de la promesse réseau.
+
+#### Évaluation de l'impact et analyse comparative (v1.0.0 vs v1.0.1)
+
+| Version | Mode | **EcoIndex** | **EcoIndex score** | **GES (gCO2e)** | **Eau (cl)** | **Taille du DOM** | **Requêtes** | **Taille totale (Ko)** | **Taille du bundle JS (Ko)** |
+|---|---|---|---|---|---|---|---|---|---|
+| **v1.0.0** (Statique) | Pré-production | 89/100 | A | 1.83 | - | 171 | 4 | 108 | 292.8 |
+| **v1.0.1** (Dynamique) | Pré-production | 92/100 (91.82) | A | 1.16 | 1.75 | 179 | 5 | 136 | 272.4 (-20.4 Ko) |
+
+**Tab.6:** Comparaison d'impact environnemental entre la version statique (v1.0.0) et la version dynamique (v1.0.1).
+
+*Analyse des écarts observés :*
+- **Score EcoIndex et émissions GES** : L'EcoIndex progresse à **92/100 (score A)** avec une baisse significative des émissions de gaz à effet de serre (**1,16 gCO₂e** contre 1,83 gCO₂e en v1.0.0) et une consommation d'eau mesurée à **1,75 cl**.
+- **Allègement du bundle applicatif** : L'exclusion des données JSON lors du bundling Vite permet de réduire la taille du bundle JavaScript principal de **292,8 Ko à 272,4 Ko** (-20,4 Ko brut, -6 Ko gzippé). Le code applicatif est dissocié du contenu éditorial.
+- **Requête réseau supplémentaire** : Le chargement dynamique introduit **1 requête HTTP supplémentaire** (5 requêtes au total contre 4) pour acheminer `sample_data.json` de façon asynchrone, portant le volume total transféré à environ 136 Ko.
+- **Taille du DOM** : Légère variation du nombre de nœuds dans le DOM (179 éléments), cohérente avec le cycle de rendu asynchrone orchestré par `useState` et `useEffect`.
+
