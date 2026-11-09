@@ -237,7 +237,13 @@ L'analyse de notre fichier de configuration met en lumière une pile technique m
 
 ### Page de visualisation des tutoriels
 
-La page de consultation permet d'accéder au détail d'un tutoriel sélectionné (fiche pratique étape par étape, métriques écologiques, informations sur l'auteur).
+Les pages des tutoriels ont pour forme `http://localhost:5173/tutorials/{id}`. Comme l'échantillon de données comportait déjà des ids, chaque tutoriel peut directement être déterminé par leurs identifiants (par exemple `http://localhost:5173/tutorials/3`).
+
+De même que précédemment, nous avons tenté d'implémenter cette page (cf. Fig. 3) conformément à ce que prévoyait la maquette. La page de consultation permet d'accéder au détail d'un tutoriel sélectionné (fiche pratique étape par étape, métriques écologiques, informations sur l'auteur).
+
+![Prototype de la page de tutoriel](/Images/page_tutoriel_3.png)
+
+**Fig. 3 :** Prototype de la page de visualisation d'un tutoriel
 
 |  | **EcoIndex** |**EcoIndex score** | **GES (gCO2e)** | **Taille du DOM** | **Requêtes** | **Taille de la page (Ko)** |
 |---|---|---|---|---|---|---|
@@ -272,4 +278,3 @@ Pour cette seconde version du prototype (v1.0.1), l'objectif est d'effectuer la 
 - **Allègement du bundle applicatif** : L'exclusion des données JSON lors du bundling Vite permet de réduire la taille du bundle JavaScript principal de **292,8 Ko à 272,4 Ko** (-20,4 Ko brut, -6 Ko gzippé). Le code applicatif est dissocié du contenu éditorial.
 - **Requête réseau supplémentaire** : Le chargement dynamique introduit **1 requête HTTP supplémentaire** (5 requêtes au total contre 4) pour acheminer `sample_data.json` de façon asynchrone, portant le volume total transféré à environ 136 Ko.
 - **Taille du DOM** : Légère variation du nombre de nœuds dans le DOM (179 éléments), cohérente avec le cycle de rendu asynchrone orchestré par `useState` et `useEffect`.
-
