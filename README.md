@@ -247,9 +247,9 @@ De même que précédemment, nous avons tenté d'implémenter cette page (cf. Fi
 
 |  | **EcoIndex** |**EcoIndex score** | **GES (gCO2e)** | **Taille du DOM** | **Requêtes** | **Taille de la page (Ko)** |
 |---|---|---|---|---|---|---|
-| Rechercher la vidéo souhaité| 92 | A | 1.17 | 182 | 24 | 5600 |
-| Trouver la vidéo du tutoriel| 98 | A | 1.03 | 32 | 114 | 5300 |
-| Ouvrir la vidéo et visionner | 98 | A | 1.03 | 32 | 114 | 5300 |
+| Rechercher la vidéo souhaité| 86 | B | 1.29 | 182 | 26 | 5590 |
+| Trouver la vidéo du tutoriel| 93 | A | 1.13 | 30 | 28 | 5590 |
+| Ouvrir la vidéo et visionner | 93 | A | 1.13 | 30 | 28 | 5590 |
 
 **Tab.5:** Évaluation de l'impact du prototype de la page de consultation d'un tutoriel (v1.0.0).
 
@@ -279,3 +279,21 @@ Pour cette seconde version du prototype (v1.0.1), l'objectif est d'effectuer la 
 - **Allègement du bundle applicatif** : L'exclusion des données JSON lors du bundling Vite permet de réduire la taille du bundle JavaScript principal de **292,8 Ko à 272,4 Ko** (-20,4 Ko brut, -6 Ko gzippé). Le code applicatif est dissocié du contenu éditorial.
 - **Requête réseau supplémentaire** : Le chargement dynamique introduit **1 requête HTTP supplémentaire** (5 requêtes au total contre 4) pour acheminer `sample_data.json` de façon asynchrone, portant le volume total transféré à environ 136 Ko.
 - **Taille du DOM** : Légère variation du nombre de nœuds dans le DOM (179 éléments), cohérente avec le cycle de rendu asynchrone orchestré par `useState` et `useEffect`.
+
+### Mesure de la consommation énergétique lors du passage à l'échelle
+
+Maintenant que notre prototype est réaliste en termes de nombre de requêtes, nous pouvons simuler les effets du "passage à l'échelle".
+
+Dans le cas qui nous occupe du visionnage des tutoriels, l'augmentation de la quantité des données à traiter ne viendra ni de l'augmentation du nombre de créateurs ni même de celle des utilisateurs de la plateforme. Par contre, il est d'usage sur les plateformes de tutoriels d'avoir accès aux anciens tutoriels qui permettent toujours de résoudre des problèmes actuelles (recettes de cuisine, nettoyage). Cette exigence fonctionnelle bien que coûteuse du point de vue environnemental nous semble contribuer grandement à l'utilité sociale et éducative de la plateforme. Par conséquent nous adopterons également ce choix de conception.
+
+#### Évolution de l'EcoIndex lors du passage à l'échelle
+
+|  | **EcoIndex** |**EcoIndex score** | **GES (gCO2e)** | **Taille du DOM** | **Requêtes** | **Taille de la page (Ko)** |
+|---|---|---|---|---|---|---|
+| Rechercher la vidéo souhaité| 72 | B | 1.59 | 182 | 31 | 5658 |
+| Trouver la vidéo du tutoriel| 78 | B | 1.45 | 32 | 29 | 5521 |
+| Ouvrir la vidéo et visionner | 78 | B | 1.45 | 32 | 29 | 5521 |
+
+**Tab.6:** Effet du passage à l'échelle sur l'impact du scénario "Apprendre à faire des pâtes" dans le prototype v1.0.1.
+
+La baisse de l'EcoIndex observée sur la plateforme de tutoriel lors du passage à l'échelle s'explique par l'évaluation d'un impact global incluant le cycle de vie des terminaux.Cette composante matérielle s'accroît proportionnellement à la complexité structurelle des pages de tutoriel, à la multiplication des éléments DOM et à l'intégration des médias.Pour s'affranchir de ce biais lié au matériel et mesurer précisément l'impact réel de la phase de consultation et de lecture, l'utilisation d'un outil dédié tel que GreenFrame est nécessaire.
