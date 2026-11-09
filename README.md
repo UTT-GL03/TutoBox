@@ -294,6 +294,6 @@ Dans le cas qui nous occupe du visionnage des tutoriels, l'augmentation de la qu
 | Trouver la vidéo du tutoriel| 78 | B | 1.45 | 32 | 29 | 5521 |
 | Ouvrir la vidéo et visionner | 78 | B | 1.45 | 32 | 29 | 5521 |
 
-**Tab.6:** Effet du passage à l'échelle sur l'impact du scénario "Apprendre à faire des pâtes" dans le prototype v1.0.1.
+**Tab.7:** Effet du passage à l'échelle sur l'impact du scénario "Apprendre à faire des pâtes" dans le prototype v1.0.1.
 
 La baisse de l'EcoIndex observée sur la plateforme de tutoriel lors du passage à l'échelle s'explique par l'évaluation d'un impact global incluant le cycle de vie des terminaux.Cette composante matérielle s'accroît proportionnellement à la complexité structurelle des pages de tutoriel, à la multiplication des éléments DOM et à l'intégration des médias.Pour s'affranchir de ce biais lié au matériel et mesurer précisément l'impact réel de la phase de consultation et de lecture, l'utilisation d'un outil dédié tel que GreenFrame est nécessaire.
