@@ -203,6 +203,8 @@ Dans un objectif de sobriété environnementale, les tutoriels sont pour l'insta
 Pour des raisons de respect des droits d'auteurs, nous utilisons des données générées (avec [`dummy-json`](https://github.com/webroo/dummy-json/blob/master/README.md)).
 Bien que fictives, ces données correspondent rigoureusement à la structure des services concurrents et aux exigences de sobriété : chaque tutoriel comporte un titre (`heading`), une rubrique (`section`), une date de publication (`issued`), des informations sur l'auteur (`creator`), une durée (`duration_seconds`), des métriques d'impact écologique (`eco_metrics` : résolution par défaut, volume transféré en Mo, émissions gCO₂e évitées, codecs et bascule audio seul), des évaluations communautaires (`ratings`), ainsi qu'une fiche pratique découpée par étapes (`written_guide`) permettant l'apprentissage sans charger le média vidéo (voir [modèle de données](sample_data.hbs)).
 
+Le fichier généré (`sample_data.json`) n'est pas versionné : il est produit à chaque intégration continue à partir de `sample_data.hbs`, ce qui évite de stocker dans Git un fichier dont la taille augmente avec le catalogue (2,9 Mo dans la simulation de passage à l'échelle). En local, il s'obtient avec `npx dummy-json sample_data.hbs > frontend/public/sample_data.json`.
+
 ## Implémentation du scénario prioritaire
 
 ### Étape de prototypage: Données chargées de manière statique
@@ -286,14 +288,65 @@ Maintenant que notre prototype est réaliste en termes de nombre de requêtes, n
 
 Dans le cas qui nous occupe du visionnage des tutoriels, l'augmentation de la quantité des données à traiter ne viendra ni de l'augmentation du nombre de créateurs ni même de celle des utilisateurs de la plateforme. Par contre, il est d'usage sur les plateformes de tutoriels d'avoir accès aux anciens tutoriels qui permettent toujours de résoudre des problèmes actuelles (recettes de cuisine, nettoyage). Cette exigence fonctionnelle bien que coûteuse du point de vue environnemental nous semble contribuer grandement à l'utilité sociale et éducative de la plateforme. Par conséquent nous adopterons également ce choix de conception.
 
+### Quelles données se multiplient avec l'usage ?
+
+Une application qui ne change pas de code peut néanmoins changer d'impact, parce que les données qu'elle manipule grossissent avec son usage. Dans TutoBox, quatre familles de données sont concernées, mais une seule pèse réellement :
+
+| Donnée | Nature de la croissance | Ordre de grandeur | Effet sur l'impact |
+|---|---|---|---|
+| Catalogue des tutoriels (`tutorials`) | contenu qui ne disparaît jamais, alimenté par les créateurs | 25 publications/jour → **2 600 tutoriels en 3,5 mois**, ~9 000 au bout d'un an | **déterminant** : une carte par tutoriel sur l'accueil (donc du DOM), et le fichier entier est retéléchargé par *chaque* page |
+| Compteurs d'audience (`views_count`, `ratings`, `creator.subscribers`) | proportionnels au trafic | quelques octets par tutoriel | négligeable en poids, mais croît indéfiniment |
+| Fiche pratique (`written_guide`) | fixée une fois par le créateur | 3 à 6 étapes | négligeable |
+| Journaux de consultation, historique (non implémentés) | linéaires au trafic | — | hors prototype, mais à anticiper |
+
+La taille d'un tutoriel dans `sample_data.json` est d'environ **1,1 Ko** : le fichier passe donc de 25 Ko (20-30 tutoriels) à **2,9 Mo** pour 2 600 tutoriels, et à plus de 10 Mo au bout d'un an. C'est cet ordre de grandeur — **× 100** — que nous simulons ci-dessous, en passant la répétition de `sample_data.hbs` de `min=20 max=30` à `2600`.
+
+### Mesure automatisée de l'EcoIndex
+
+Pour que les mesures soient disponibles publiquement et reproductibles, elles ne sont plus produites à la main dans un navigateur mais **à chaque push**, dans l'intégration continue :
+
+1. le scénario prioritaire est décrit dans [`scenarios/learn_to_make_pasta.yml`](scenarios/learn_to_make_pasta.yml) : chargement de l'accueil, clic sur le premier tutoriel (« Pâtes fraîches maison »), défilement de la fiche pratique, retour à l'accueil ;
+2. le job `measure_ecoindex` démarre l'application avec nginx (action composite `start`), installe [GreenIT Analysis CLI](https://github.com/cnumr/GreenIT-Analysis-cli) et exécute `greenit analyse scenarios/learn_to_make_pasta.yml EcoIndex.html --format html --ci` ;
+3. les rapports HTML (rapport global + rapport détaillé du scénario) sont publiés en **artefacts** du run ;
+4. `sample_data.json` n'est plus versionné : il est regénéré à chaque run avec `dummy-json` à partir de [`sample_data.hbs`](sample_data.hbs), puis placé dans `frontend/public/` avant le build.
+
+En local, la même mesure s'obtient avec :
+
+```bash
+cd frontend && npm run build && cd ..
+docker compose up --detach
+greenit analyse scenarios/learn_to_make_pasta.yml EcoIndex.html --format html
+```
+
+Les deux mesures commentées ci-dessous sont disponibles en artefacts : [avant](https://github.com/UTT-GL03/TutoBox/actions/runs/43881111079/artifacts/14231609183) et [après](https://github.com/UTT-GL03/TutoBox/actions/runs/43881455350/artifacts/14231629586) le passage à l'échelle. Le scénario complet s'exécute en une dizaine de secondes dans les deux cas : c'est l'empreinte qui augmente, pas la durée du test.
+
 #### Évolution de l'EcoIndex lors du passage à l'échelle
 
-|  | **EcoIndex** |**EcoIndex score** | **GES (gCO2e)** | **Taille du DOM** | **Requêtes** | **Taille de la page (Ko)** |
-|---|---|---|---|---|---|---|
-| Rechercher la vidéo souhaité| 72 | B | 1.59 | 182 | 31 | 5658 |
-| Trouver la vidéo du tutoriel| 78 | B | 1.45 | 32 | 29 | 5521 |
-| Ouvrir la vidéo et visionner | 78 | B | 1.45 | 32 | 29 | 5521 |
+| Étape | **EcoIndex** |**Score** | **GES (gCO₂e)** | **Eau (cl)** | **Taille du DOM** | **Requêtes** | **Taille de la page (Ko)** |
+|---|---|---|---|---|---|---|---|
+| Chargement de la page | <del>83</del><br/>32 | <del>A</del><br/>E | <del>1,34</del><br/>2,36 | <del>2,01</del><br/>3,54 | <del>141</del><br/>16 481 | 6 | <del>387</del><br/>3 297 |
+| Ouvrir le tutoriel | <del>91</del><br/>79 | A | <del>1,18</del><br/>1,42 | <del>1,77</del><br/>2,13 | 29 | 2 | <del>24</del><br/>2 934 |
+| Revenir à l'accueil | <del>88</del><br/>47 | <del>A</del><br/>D | <del>1,24</del><br/>2,06 | <del>1,86</del><br/>3,09 | <del>141</del><br/>16 481 | 0 | 0 |
 
-**Tab.7:** Effet du passage à l'échelle sur l'impact du scénario "Apprendre à faire des pâtes" dans le prototype v1.0.1.
+**Tab.7:** Effet du passage à l'échelle (2 600 tutoriels) sur l'impact du scénario "Apprendre à faire des pâtes" dans le prototype v1.0.1. Valeurs barrées : avant (`sample_data.hbs` à 20-30 tutoriels) ; valeurs en clair : après.
 
-La baisse de l'EcoIndex observée sur la plateforme de tutoriel lors du passage à l'échelle s'explique par l'évaluation d'un impact global incluant le cycle de vie des terminaux.Cette composante matérielle s'accroît proportionnellement à la complexité structurelle des pages de tutoriel, à la multiplication des éléments DOM et à l'intégration des médias.Pour s'affranchir de ce biais lié au matériel et mesurer précisément l'impact réel de la phase de consultation et de lecture, l'utilisation d'un outil dédié tel que GreenFrame est nécessaire.
+Sur la dernière étape, le nombre de requêtes fluctue selon que Chromium réutilise ou non le fichier JSON déjà téléchargé (0 requête dans le run publié, 2 en local, ce qui fait osciller l'EcoIndex entre 47 D et 33 E) ; les deux premières étapes sont stables d'un run à l'autre.
+
+| Scénario complet (3 étapes) | Avant | Après | Écart |
+|---|---|---|---|
+| Données transférées par visite | 411 Ko | 6 231 Ko | **× 15,2** |
+| GES par visite | 3,76 gCO₂e | 5,84 gCO₂e | × 1,55 |
+
+**Tab.8:** Bilan du scénario avant et après passage à l'échelle.
+
+La baisse de l'EcoIndex s'explique par deux mécanismes distincts, qu'il faut séparer :
+
+- **Sur la page d'accueil**, l'EcoIndex chute de 83 (A) à 32 (E) parce que le nombre de cartes, donc d'éléments du DOM, est multiplié par **117** (141 → 16 481 nœuds). Le poids des données ne progresse "que" de × 8,5, mais l'EcoIndex intègre une part liée à la fabrication et à la fin de vie des terminaux, qui croît avec le nombre d'éléments à afficher. C'est le même effet que celui observé sur la page des titres de QVOTIDIE (198 → 19 014 nœuds, 81 A → 29 E) : l'ordre de grandeur est cohérent, ce qui valide la mesure.
+- **Sur la page d'un tutoriel**, la fiche affichée n'a pas changé d'un octet (29 nœuds de DOM avant comme après), et pourtant l'EcoIndex baisse de 91 (A) à 79 (A) et le poids transféré explose de 24 Ko à **2 934 Ko** (× 122). La cause est architecturale : `Tutorial.jsx` appelle `fetch('/sample_data.json')` puis filtre en mémoire. Afficher une fiche de trois étapes coûte donc désormais le téléchargement du catalogue entier — 2,9 Mo pour lire 1,1 Ko.
+
+Trois enseignements pour la suite du projet :
+
+- **Le nombre de requêtes est un mauvais indicateur ici** : il ne bouge pas (6 puis 2), alors que le volume est multiplié par 122. Un budget de requêtes ne suffit pas à protéger une application de ce type d'effet.
+- **Les données croissent, les actifs non** : les 362 Ko d'actifs du build (JS 272 Ko, CSS 85 Ko, SVG 4 Ko, HTML 0,4 Ko) sont devenus négligeables devant les 2,9 Mo de données sur la page tutoriel, alors qu'ils dominaient complètement la v1.0.1 (387 Ko de page pour 25 Ko de données). Sur l'accueil, c'est l'inverse : le DOM et les données pèsent désormais plus que le code. GreenIT signale d'ailleurs deux bonnes pratiques non satisfaites qui pèseraient sur les deux tableaux : **aucun en-tête `Cache-Control`/`Expires`** sur les actifs (0 % de ressources cacheables) et **aucune compression** (0 % de ressources compressées, alors que le JS ferait 87,65 Ko gzippé au lieu de 272 Ko *in fine*), la configuration nginx de l'image officielle livrant `gzip` en commentaire.
+- **Piste évidente** : ne plus télécharger le catalogue entier pour afficher un tutoriel. C'est précisément l'objet de l'étape suivante (introduction d'une base de données servant un seul tutoriel à la fois), et c'est la même trajectoire que celle suivie par QVOTIDIE entre v1.0.1 et v2.0.0.
+
