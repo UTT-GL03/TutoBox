@@ -301,7 +301,7 @@ Parmi les données manipulées par TutoBox, quatre familles augmentent au cours 
 | Fiche pratique (`written_guide`) | fixée une fois par le créateur | 3 à 6 étapes | négligeable |
 | Journaux de consultation, historique (non implémentés) | linéaires au trafic | — | hors prototype, mais à anticiper |
 
-La taille d'un tutoriel dans `sample_data.json` est d'environ **1,1 Ko** : le fichier passe donc de 25 Ko (20-30 tutoriels) à **2,9 Mo** pour 2 600 tutoriels, et à plus de 10 Mo au bout d'un an. C'est cet ordre de grandeur — **× 100** — que nous simulons ci-dessous, en passant la répétition de `sample_data.hbs` de `min=20 max=30` à `2600`.
+La taille d'un tutoriel dans `sample_data.json` est d'environ **1,1 Ko** : le fichier passe donc de 25 Ko (20-30 tutoriels) à **2,9 Mo** pour 2 600 tutoriels, et à plus de 10 Mo au bout d'un an. C'est cet ordre de grandeur **× 100** que nous simulons ci-dessous, en passant la répétition de `sample_data.hbs` de `min=20 max=30` à `2600`.
 
 ### Évolution de l'EcoIndex lors du passage à l'échelle
 
