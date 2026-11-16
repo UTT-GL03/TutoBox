@@ -1,0 +1,17 @@
+# To be used with GreenIT Analysis CLI
+- name: Apprendre à faire des pâtes
+  url: http://localhost/
+  waitForSelector: article h2
+  actions:
+    - name: Ouvrir le tutoriel
+      type: click
+      element: article a
+      pageChange: true
+      waitForSelector: h3
+    - name: Lire la fiche pratique
+      type: scroll
+    - name: Revenir à l'accueil
+      type: click
+      element: '#root > header a'
+      pageChange: true
+      waitForSelector: article h2
