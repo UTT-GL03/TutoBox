@@ -1,7 +1,8 @@
 # To be used with GreenIT Analysis CLI
 - name: Apprendre à faire des pâtes
   url: http://localhost/
-  waitForSelector: article h2
+  # wait for the last row of cards: the whole catalogue is rendered by then
+  waitForSelector: main.container > div.grid:last-child
   actions:
     - name: Ouvrir le tutoriel
       type: click
@@ -14,4 +15,4 @@
       type: click
       element: '#root > header a'
       pageChange: true
-      waitForSelector: article h2
+      waitForSelector: main.container > div.grid:last-child

@@ -324,29 +324,30 @@ Les deux mesures commentées ci-dessous sont disponibles en artefacts : [avant](
 
 | Étape | **EcoIndex** |**Score** | **GES (gCO₂e)** | **Eau (cl)** | **Taille du DOM** | **Requêtes** | **Taille de la page (Ko)** |
 |---|---|---|---|---|---|---|---|
-| Chargement de la page | <del>83</del><br/>32 | <del>A</del><br/>E | <del>1,34</del><br/>2,36 | <del>2,01</del><br/>3,54 | <del>141</del><br/>16 481 | 6 | <del>387</del><br/>3 297 |
-| Ouvrir le tutoriel | <del>91</del><br/>79 | A | <del>1,18</del><br/>1,42 | <del>1,77</del><br/>2,13 | 29 | 2 | <del>24</del><br/>2 934 |
-| Revenir à l'accueil | <del>88</del><br/>47 | <del>A</del><br/>D | <del>1,24</del><br/>2,06 | <del>1,86</del><br/>3,09 | <del>141</del><br/>16 481 | 0 | 0 |
+| Chargement de la page | <del>81</del><br/>32 | <del>A</del><br/>E | <del>1,38</del><br/>2,36 | <del>2,07</del><br/>3,54 | <del>198</del><br/>16 481 | 6 | <del>397</del><br/>3 300 |
+| Ouvrir le tutoriel | <del>91</del><br/>79 | A | <del>1,18</del><br/>1,42 | <del>1,77</del><br/>2,13 | 30 | 2 | <del>34</del><br/>2 937 |
+| Revenir à l'accueil | <del>83</del><br/>33 | <del>A</del><br/>E | <del>1,34</del><br/>2,34 | <del>2,01</del><br/>3,51 | <del>198</del><br/>16 481 | 2 | <del>34</del><br/>2 937 |
 
 **Tab.7:** Effet du passage à l'échelle (2 600 tutoriels) sur l'impact du scénario "Apprendre à faire des pâtes" dans le prototype v1.0.1. Valeurs barrées : avant (`sample_data.hbs` à 20-30 tutoriels) ; valeurs en clair : après.
 
-Sur la dernière étape, le nombre de requêtes fluctue selon que Chromium réutilise ou non le fichier JSON déjà téléchargé (0 requête dans le run publié, 2 en local, ce qui fait osciller l'EcoIndex entre 47 D et 33 E) ; les deux premières étapes sont stables d'un run à l'autre.
+Ces valeurs sont reproductibles : chaque état a été mesuré deux fois de suite, avec des chiffres identiques. Cela a demandé une correction du scénario : l'attente porte désormais sur la **dernière ligne de cartes** (`main.container > div.grid:last-child`) et non sur la première, sans quoi GreenIT peut prendre la mesure avant que React ait rendu les 2 600 cartes (14 nœuds au lieu de 16 481, EcoIndex 94 au lieu de 33). L'artefact [avant](https://github.com/UTT-GL03/TutoBox/actions/runs/43881111079/artifacts/14231609183) a été produit avec la version initiale du scénario, d'où un DOM de 141 nœuds au lieu de 198.
 
 | Scénario complet (3 étapes) | Avant | Après | Écart |
 |---|---|---|---|
-| Données transférées par visite | 411 Ko | 6 231 Ko | **× 15,2** |
-| GES par visite | 3,76 gCO₂e | 5,84 gCO₂e | × 1,55 |
+| Données transférées par visite | 464 Ko | 9 174 Ko | **× 19,8** |
+| GES par visite | 3,90 gCO₂e | 6,12 gCO₂e | × 1,57 |
+| Eau par visite | 5,85 cl | 9,18 cl | × 1,57 |
 
 **Tab.8:** Bilan du scénario avant et après passage à l'échelle.
 
 La baisse de l'EcoIndex s'explique par deux mécanismes distincts, qu'il faut séparer :
 
-- **Sur la page d'accueil**, l'EcoIndex chute de 83 (A) à 32 (E) parce que le nombre de cartes, donc d'éléments du DOM, est multiplié par **117** (141 → 16 481 nœuds). Le poids des données ne progresse "que" de × 8,5, mais l'EcoIndex intègre une part liée à la fabrication et à la fin de vie des terminaux, qui croît avec le nombre d'éléments à afficher. C'est le même effet que celui observé sur la page des titres de QVOTIDIE (198 → 19 014 nœuds, 81 A → 29 E) : l'ordre de grandeur est cohérent, ce qui valide la mesure.
-- **Sur la page d'un tutoriel**, la fiche affichée n'a pas changé d'un octet (29 nœuds de DOM avant comme après), et pourtant l'EcoIndex baisse de 91 (A) à 79 (A) et le poids transféré explose de 24 Ko à **2 934 Ko** (× 122). La cause est architecturale : `Tutorial.jsx` appelle `fetch('/sample_data.json')` puis filtre en mémoire. Afficher une fiche de trois étapes coûte donc désormais le téléchargement du catalogue entier — 2,9 Mo pour lire 1,1 Ko.
+- **Sur la page d'accueil**, l'EcoIndex chute de 81 (A) à 32 (E) parce que le nombre de cartes, donc d'éléments du DOM, est multiplié par **83** (198 → 16 481 nœuds). Le poids de la page ne progresse "que" de × 8,3 (397 → 3 300 Ko), mais l'EcoIndex intègre une part liée à la fabrication et à la fin de vie des terminaux, qui croît avec le nombre d'éléments à afficher. C'est exactement le même effet que sur la page des titres de QVOTIDIE (198 → 19 014 nœuds, 81 A → 29 E) : l'ordre de grandeur est cohérent, ce qui valide la mesure.
+- **Sur la page d'un tutoriel**, la fiche affichée n'a pas changé d'un octet (30 nœuds de DOM avant, 28 après), et pourtant l'EcoIndex baisse de 91 (A) à 79 (A) et le poids transféré explose de 34 Ko à **2 937 Ko** (× 87). La cause est architecturale : `Tutorial.jsx` appelle `fetch('/sample_data.json')` puis filtre en mémoire. Afficher une fiche de trois étapes coûte donc désormais le téléchargement du catalogue entier — 2,9 Mo pour lire 1,1 Ko.
 
 Trois enseignements pour la suite du projet :
 
-- **Le nombre de requêtes est un mauvais indicateur ici** : il ne bouge pas (6 puis 2), alors que le volume est multiplié par 122. Un budget de requêtes ne suffit pas à protéger une application de ce type d'effet.
-- **Les données croissent, les actifs non** : les 362 Ko d'actifs du build (JS 272 Ko, CSS 85 Ko, SVG 4 Ko, HTML 0,4 Ko) sont devenus négligeables devant les 2,9 Mo de données sur la page tutoriel, alors qu'ils dominaient complètement la v1.0.1 (387 Ko de page pour 25 Ko de données). Sur l'accueil, c'est l'inverse : le DOM et les données pèsent désormais plus que le code. GreenIT signale d'ailleurs deux bonnes pratiques non satisfaites qui pèseraient sur les deux tableaux : **aucun en-tête `Cache-Control`/`Expires`** sur les actifs (0 % de ressources cacheables) et **aucune compression** (0 % de ressources compressées, alors que le JS ferait 87,65 Ko gzippé au lieu de 272 Ko *in fine*), la configuration nginx de l'image officielle livrant `gzip` en commentaire.
+- **Le nombre de requêtes est un mauvais indicateur ici** : il ne bouge pas (6 puis 2), alors que le volume est multiplié par 87. Un budget de requêtes ne suffit pas à protéger une application de ce type d'effet.
+- **Les données croissent, les actifs non** : les 362 Ko d'actifs du build (JS 272 Ko, CSS 85 Ko, SVG 4 Ko, HTML 0,4 Ko) sont devenus négligeables devant les 2,9 Mo de données sur la page tutoriel, alors qu'ils dominaient complètement la v1.0.1 (397 Ko de page pour 35 Ko de données). Sur l'accueil, c'est l'inverse : le DOM et les données pèsent désormais plus que le code. GreenIT signale d'ailleurs deux bonnes pratiques non satisfaites qui pèseraient sur les deux tableaux : **aucun en-tête `Cache-Control`/`Expires`** sur les actifs (0 % de ressources cacheables) et **aucune compression** (0 % de ressources compressées, alors que le JS ferait 87,65 Ko gzippé au lieu de 272 Ko *in fine*), la configuration nginx de l'image officielle livrant `gzip` en commentaire.
 - **Piste évidente** : ne plus télécharger le catalogue entier pour afficher un tutoriel. C'est précisément l'objet de l'étape suivante (introduction d'une base de données servant un seul tutoriel à la fois), et c'est la même trajectoire que celle suivie par QVOTIDIE entre v1.0.1 et v2.0.0.
 
