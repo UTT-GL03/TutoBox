@@ -1,0 +1,50 @@
+name: Test
+on:
+  push:
+
+jobs:
+
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download sources
+        uses: actions/checkout@v5
+      - name: Set up NodeJS
+        uses: actions/setup-node@v6
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: frontend/package-lock.json
+      - name: Install frontend dependencies
+        run: |-
+          cd frontend
+          npm ci
+      - name: Build frontend
+        run: |-
+          cd frontend
+          npm run build
+      - name: Save frontend build for later
+        uses: actions/upload-artifact@v4
+        with:
+          name: frontend-build
+          path: frontend/dist
+
+  serve:
+    needs:
+      - build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download sources
+        uses: actions/checkout@v5
+      - name: Start application
+        uses: ./.github/actions/start
+      - name: Check the application is served by nginx
+        run: |-
+          curl --fail --silent --show-error http://localhost/sample_data.json > /dev/null
+          curl --fail --silent --show-error http://localhost/tutorials/1 > /dev/null
+          echo "Home page and tutorial page (SPA fallback) are both answered."
+      - name: Show containers status
+        run: docker compose ps
+      - name: Stop containers
+        if: always()
+        run: docker compose down
