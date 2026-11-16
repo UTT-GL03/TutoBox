@@ -318,7 +318,7 @@ docker compose up --detach
 greenit analyse scenarios/learn_to_make_pasta.yml EcoIndex.html --format html
 ```
 
-Les deux mesures commentées ci-dessous sont disponibles en artefacts : [avant](https://github.com/UTT-GL03/TutoBox/actions/runs/43881111079/artifacts/14231609183) et [après](https://github.com/UTT-GL03/TutoBox/actions/runs/43881455350/artifacts/14231629586) le passage à l'échelle. Le scénario complet s'exécute en une dizaine de secondes dans les deux cas : c'est l'empreinte qui augmente, pas la durée du test.
+Les deux mesures commentées ci-dessous sont disponibles en artefacts : [avant](https://github.com/UTT-GL03/TutoBox/actions/runs/43881111079/artifacts/14231609183) et [après](https://github.com/UTT-GL03/TutoBox/actions/runs/43882537957/artifacts/14233267413) le passage à l'échelle. Le scénario complet s'exécute en une dizaine de secondes dans les deux cas : c'est l'empreinte qui augmente, pas la durée du test.
 
 #### Évolution de l'EcoIndex lors du passage à l'échelle
 
